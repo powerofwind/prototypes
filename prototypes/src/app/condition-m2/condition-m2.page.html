@@ -1,0 +1,90 @@
+<ion-content mode="ios">
+
+  <ion-card color="tertiary" class="ion-margin-top">
+    <ion-card-content class="text-indent">
+      <ion-label>
+        เนื่องจากการรับคูปอง จำเป็นจะต้องผ่านเงื่อนไขที่กล่าวมาทั้งหมด จึงจะสามารถดำเนินการถัดไปได้
+        กรุณาทำให้ผ่านทุกรายการที่กล่าวมา
+      </ion-label>
+    </ion-card-content>
+  </ion-card>
+  <hr class="ion-no-margin">
+
+  <ion-list class="ion-no-padding" lines="none">
+    <!-- สมัครสมาชิก -->
+    <ng-container>
+      <ion-item color="tertiary" *ngIf="isAgree == undefined">
+        <ion-icon name="alert-circle-outline" color="medium"></ion-icon>
+        <ion-label class="ion-padding-start" color="medium"><b>สมัครสมาชิกของร้านเดี๋ยวก็ละลาย</b>
+        </ion-label>
+      </ion-item>
+
+      <ion-item color="tertiary" *ngIf="isAgree == 'true'">
+        <ion-icon name="checkmark-circle-outline" color="primary"></ion-icon>
+        <ion-label class="ion-padding-start" color="primary"><b>สมัครสมาชิกของร้านเดี๋ยวก็ละลาย</b>
+        </ion-label>
+      </ion-item>
+
+      <ion-card color="tertiary" class="ion-padding-end ion-padding-bottom ion-card-description">
+        <div *ngIf="isAgree == undefined">
+          <ion-label color="medium">ผู้ใช้งานยินยอมเป็นสมาชิกของร้านเดี๋ยวก็ละลายเท่านั้น จึงจะได้รับส่วนลดในการชำระเงิน
+          </ion-label>
+          <p class="ion-no-margin">
+            <ion-text color="danger">สถานะ: รอดำเนินการ</ion-text>
+          </p>
+        </div>
+
+        <div *ngIf="isAgree == 'true'">
+          <ion-label color="primary">ผู้ใช้งานยินยอมเป็นสมาชิกของร้านเดี๋ยวก็ละลายเท่านั้น
+            จึงจะได้รับส่วนลดในการชำระเงิน
+          </ion-label>
+          <p class="ion-no-margin">
+            <ion-text color="primary">สถานะ: ดำเนินการเรียบร้อย</ion-text>
+          </p>
+        </div>
+      </ion-card>
+      <hr class="ion-no-margin">
+    </ng-container>
+
+
+    <!-- จ่ายเงิน -->
+    <ng-container>
+      <ion-item color="tertiary" *ngIf="isAgree == undefined">
+        <ion-icon name="alert-circle-outline" color="medium"></ion-icon>
+        <ion-label class="ion-padding-start" color="medium"><b>จ่ายเงินค่าสมัครสมาชิกของร้านเดี๋ยวก็ละลาย</b>
+        </ion-label>
+      </ion-item>
+
+      <ion-item color="tertiary" *ngIf="isAgree == 'true'">
+        <ion-icon name="checkmark-circle-outline" color="primary"></ion-icon>
+        <ion-label class="ion-padding-start" color="primary"><b>จ่ายเงินค่าสมัครสมาชิกของร้านเดี๋ยวก็ละลาย</b>
+        </ion-label>
+      </ion-item>
+
+      <ion-card color="tertiary" class="ion-padding-end ion-padding-bottom ion-card-description">
+        <div *ngIf="isAgree == undefined">
+          <ion-label color="medium">ผู้ใช้งานยินยอมเป็นสมาชิกของร้านเดี๋ยวก็ละลายเท่านั้น จึงจะได้รับส่วนลดในการชำระเงิน
+          </ion-label>
+          <p class="ion-no-margin">
+            <ion-text color="danger">สถานะ: รอยืนยันการชำระเงินค่าสมาชิก</ion-text>
+          </p>
+        </div>
+
+        <div *ngIf="isAgree == 'true'">
+          <ion-label color="primary">ผู้ใช้งานยินยอมเป็นสมาชิกของร้านเดี๋ยวก็ละลายเท่านั้น
+            จึงจะได้รับส่วนลดในการชำระเงิน
+          </ion-label>
+          <p class="ion-no-margin">
+            <ion-text color="danger">สถานะ: รอยืนยันการชำระเงินค่าสมัครสมาชิก</ion-text>
+          </p>
+        </div>
+      </ion-card>
+      <hr class="ion-no-margin">
+    </ng-container>
+  </ion-list>
+
+</ion-content>
+<ion-footer>
+  <ion-button color="danger" class="ion-no-margin" expand="full" (click)="gotoPage()">ทำรายการที่ไม่ผ่านเงื่อนไข
+  </ion-button>
+</ion-footer>

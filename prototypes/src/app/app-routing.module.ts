@@ -106,6 +106,18 @@ const routes: Routes = [
     path: 'memeber',
     loadChildren: () => import('./memeber/memeber.module').then( m => m.MemeberPageModule)
   },
+  {
+    path: 'eslip-detail-m2',
+    loadChildren: () => import('./eslip-detail-m2/eslip-detail-m2.module').then( m => m.EslipDetailM2PageModule)
+  },
+  {
+    path: 'condition-m2',
+    loadChildren: () => import('./condition-m2/condition-m2.module').then( m => m.ConditionM2PageModule)
+  },
+  {
+    path: 'consent-m2',
+    loadChildren: () => import('./consent-m2/consent-m2.module').then( m => m.ConsentM2PageModule)
+  },
 
 
 ];
