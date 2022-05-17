@@ -102,6 +102,10 @@ const routes: Routes = [
     path: 'eslip-home',
     loadChildren: () => import('./eslip-home/eslip-home.module').then( m => m.EslipHomePageModule)
   },
+  {
+    path: 'memeber',
+    loadChildren: () => import('./memeber/memeber.module').then( m => m.MemeberPageModule)
+  },
 
 
 ];
