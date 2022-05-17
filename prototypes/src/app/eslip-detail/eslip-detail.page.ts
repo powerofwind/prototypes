@@ -27,8 +27,6 @@ export class EslipDetailPage implements OnInit {
     if (this.isPay == false && this.isAgree) {
       const alert = document.createElement('ion-alert');
       alert.cssClass = 'my-custom-class';
-      // alert.header = 'Alert';
-      // alert.subHeader = 'Subtitle';
       alert.message = 'อยู่ระหว่างรอการชำระเงินค่าสมัครสมาชิก';
       alert.buttons = ['Cancel'];
 

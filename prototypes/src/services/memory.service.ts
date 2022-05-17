@@ -8,6 +8,9 @@ export class MemoryService {
   public data: any;
   public isAgree: boolean;
   public isPay: boolean;
+  public isAgreeM2: boolean;
+  public isPayM2: boolean;
+  public isHomeM2: boolean;
 
   constructor() { }
 }

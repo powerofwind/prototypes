@@ -53,5 +53,5 @@
 </ion-content>
 
 <ion-footer>
-  <ion-button color="danger" class="ion-no-margin" expand="full" [routerLink]="['/condition-m2']" routerLinkActive="router-link-active" >สนใจ</ion-button>
+  <ion-button color="danger" class="ion-no-margin" expand="full" (click)="gotoPage()" routerLinkActive="router-link-active" >{{text}}</ion-button>
 </ion-footer>

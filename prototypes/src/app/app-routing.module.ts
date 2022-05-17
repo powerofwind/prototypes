@@ -118,6 +118,22 @@ const routes: Routes = [
     path: 'consent-m2',
     loadChildren: () => import('./consent-m2/consent-m2.module').then( m => m.ConsentM2PageModule)
   },
+  {
+    path: 'cart-edit-m2',
+    loadChildren: () => import('./cart-edit-m2/cart-edit-m2.module').then( m => m.CartEditM2PageModule)
+  },
+  {
+    path: 'cart-checkout-m2',
+    loadChildren: () => import('./cart-checkout-m2/cart-checkout-m2.module').then( m => m.CartCheckoutM2PageModule)
+  },
+  {
+    path: 'cart-dialog-m2',
+    loadChildren: () => import('./cart-dialog-m2/cart-dialog-m2.module').then( m => m.CartDialogM2PageModule)
+  },
+  {
+    path: 'eslip-home-m2',
+    loadChildren: () => import('./eslip-home-m2/eslip-home-m2.module').then( m => m.EslipHomeM2PageModule)
+  },
 
 
 ];
