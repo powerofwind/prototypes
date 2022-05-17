@@ -1,0 +1,169 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title *ngIf="isAgreementOpening == false">คำขออนุญาตในการสมัครสมาชิก</ion-title>
+    <ion-title *ngIf="isAgreementOpening == true">ข้อกำหนดและเงื่อนไขในการใช้</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form [formGroup]="fg" (ngSubmit)="onSave()">
+
+    <ng-container *ngIf="isAgreementOpening == true">
+      <ion-card class="ion-padding-top" detail="false" color="tertiary">
+        <ion-card-content>
+          <div class="ion-text-center">
+            <img class="circle logo-l" src="assets/imgs/logo.jpg" />
+          </div>
+          <br>
+          <ion-label color="dark">
+            <h1 class="ion-margin-top ion-text-center"><b>เดี๋ยวก็ละลาย</b></h1>
+          </ion-label>
+          <br>
+          <div class="text-indent">ข้อกำหนดและเงื่อนไขการใช้เป็นสมาชิกร้านเดี๋ยวก็ละลาย
+            <br>
+            <br>
+            <div class="text-indent">
+              แชเชือน วานิลารีสอร์ตไทเฮา ก๊วนพะเรอ ทิปอวอร์ด พอเพียงคอนโดมิเนียมเอ็นทรานซ์แชมปิยองแจ๊กพอต เก๋ากี้แชมป์
+              จีดีพีดีพาร์ทเมนท์อาข่าโพลล์ฮ่องเต้ บ็อกซ์สเก็ตช์ม้ง ชีสบ๊อบ โอเวอร์พาสตาเทรลเล่อร์รีสอร์ต
+              ว้อยซาดิสม์อิมพีเรียล วอร์รูมฮาโลวีนถูกต้องแทงโก้เบลอ โหงวเฮ้งคาราโอเกะ โปรเจคท์ โพลารอยด์แทงกั๊ก
+              สเตริโอเฮียริคเตอร์พ่อค้าป๋า
+
+              การันตีคอร์สพุทโธไฮแจ็ค พูลตุ๊ดแคทวอล์คว้าวงั้น เจได ดีเจนอร์ทคำตอบโรแมนติค สเตชั่น
+              โปรเจ็คท์ไฮเอนด์แมนชั่นซามูไร เวิร์กช็อป แชเชือน กับดักพล็อต แพตเทิร์นกีวี วีซ่า เตี๊ยมเรตบุ๋นสวีท
+              เซรามิกอพาร์ตเมนต์แบต พรีเซ็นเตอร์สารขัณฑ์วิทย์ราเมนเบอร์เกอร์ วิลเลจโอยัวะพะเรอ
+              วัคค์เวิร์กสี่แยกฮีโร่ฮิปโป
+
+              ป๋าเพรสอพาร์ตเมนต์อิออนอึ๋ม ซิลเวอร์สหัสวรรษมยุราภิรมย์แชมปิยอง สจ๊วตเลคเชอร์สปายเรซินเพนตากอน สเตอริโอ
+              แอ็คชั่นฟิวเจอร์อัลมอนด์ ศึกษาศาสตร์แซวหมิงป๋าลีก มยุราภิรมย์ ปาร์ตี้บร็อกโคลีซากุระฟิวเจอร์
+              รัมคอมเพล็กซ์เซ็นทรัล ไบโอพรีเซ็นเตอร์ วิทย์คำตอบจิตเภทคอมเมนต์ขั้นตอน อพาร์ตเมนท์
+              ว้อดก้ากับดักมาร์ชโอเปร่า
+              จุ๊ยฟีดพุดดิ้ง คอร์รัปชั่นเดี้ยง ดาวน์แพลนมั้งท็อปบูต
+            </div>
+            <br>
+            <div>หมายเหตุ : หากคุณไม่ให้ความยินยอม คุณจะไม่สามารถใช้ หรือเปลี่ยนแปลงบริการนี้ได้
+              เนื่องจากการบริษัทจำเป็นจะพิสูจน์และยืนยันตัวตนของคุณ ตามกำหนดของทางการ</div>
+          </div>
+        </ion-card-content>
+      </ion-card>
+
+    </ng-container>
+
+    <ng-container *ngIf="isAgreementOpening == false">
+      <ion-card color="tertiary" class="ion-text-center ion-padding-top">
+        <ion-avatar color="tertiary" class="avatar-l center ion-margin-top ion-margin-bottom">
+          <img src="assets/imgs/logo.jpg" />
+        </ion-avatar>
+        <ion-label>
+          <h2><b>เดี๋ยวก็ละลาย</b></h2>
+        </ion-label>
+        <ion-text>
+          <p>18/05/2022 (14:00)</p>
+        </ion-text>
+      </ion-card>
+<ion-card>
+  &nbsp;
+</ion-card>
+      <ion-card color="tertiary" class="ion-padding ">
+        <ion-label color="medium">
+          <p><b>รายละเอียดร้าน</b></p>
+          <p>ป๊อกอาร์ติสต์ สตรอว์เบอร์รีโบรชัวร์ แจ๊กพ็อตตอกย้ำริกเตอร์ เบิร์น อิเลียดซาตาน เทคโนแพลนสันทนาการ
+            สหัสวรรษสโตร์ เบิร์นวอเตอร์ ไกด์แมคเคอเรลโอเพ่นเวสต์ แทงกั๊กอัลไซเมอร์ล็อบบี้แอ๊บแบ๊ว แคทวอล์คมาร์ตฟอร์ม
+            ซ้อเห่ย มาเฟียเกจิเซนเซอร์บอมบ์ โปรเจกต์เก๋ากี้ศิรินทร์กาญจนาภิเษกกรีน ตรวจสอบรอยัลตี้อัลไซเมอร์สแล็ก
+            ไอซียูอ่อนด้อยกุนซือดีลเลอร์ดัมพ์</p>
+        </ion-label>
+
+        <ion-row class="ion-padding">
+          <ion-col size="auto">
+            <ion-checkbox mode="ios" color="danger" formControlName="isAceeptAgreement"></ion-checkbox>
+          </ion-col>
+          <ion-col size="8">
+            <ion-label>
+              <b>ฉันได้อ่านและยอมรับ
+                <ion-text color="primary" (click)="onOpenAgreement()">ข้อตกลง</ion-text>
+                แล้ว
+              </b>
+              <ion-text color="danger" *ngIf="isInvalid('isAceeptAgreement')">
+                <p>กรุณายอมรับ</p>
+              </ion-text>
+            </ion-label>
+          </ion-col>
+        </ion-row>
+
+        <ion-label color="medium"><b>รายการที่ต้องการ</b></ion-label>
+        <ion-item color="tertiary" lines="none">
+          <ion-label>
+            <b>1. ชำระเงินค่าสมัครสมาชิก 299 บาท (*สมาชิกมีอายุ 1 ปีนับจากวันที่ชำระเงินเรียบร้อยแล้ว)</b>
+            <ion-text color="primary">
+              <h3 (click)="gotoCart()">ชำระค่าสมาชิก</h3>
+            </ion-text>
+          </ion-label>
+        </ion-item>
+
+        <ion-label color="medium"><b>Consent Management</b></ion-label>
+        <ion-item color="tertiary" lines="none">
+          <ion-checkbox mode="ios" color="danger" slot="start" formControlName="isSubscribe">
+          </ion-checkbox>
+          <ion-label>สมัครและชำระเงินค่าสมัครสมาชิก 299 บาท (*สมาชิกมีอายุ 1 ปีนับจากวันที่ชำระเงินเรียบร้อยแล้ว)</ion-label>
+        </ion-item>
+        <ion-item color="tertiary" lines="none">
+          <ion-checkbox mode="ios" color="danger" slot="start" formControlName="isAddShortcut">
+          </ion-checkbox>
+          <ion-label>แจ้งเตือนการต่ออายุสมาชิกล่วงหน้า 1 เดือนก่อนวันหมดอายุที่หน้า Home</ion-label>
+        </ion-item>
+        <!-- <ion-row class="ion-padding">
+          <ion-col size="auto">
+            <ion-checkbox mode="ios" color="danger" formControlName="isAceeptAgreement"></ion-checkbox>
+          </ion-col>
+          <ion-col size="8">
+            <ion-label>
+              <b>ฉันได้อ่านและยอมรับ
+                <ion-text color="primary" (click)="onOpenAgreement()">ข้อตกลง</ion-text>
+                แล้ว
+              </b>
+              <ion-text color="danger" *ngIf="isInvalid('isAceeptAgreement')">
+                <p>กรุณายอมรับ</p>
+              </ion-text>
+            </ion-label>
+          </ion-col>
+        </ion-row> -->
+      </ion-card>
+
+      <div class="ion-margin">
+        <ion-card color="tertiary" class="ion-no-padding border-radius">
+          <ion-list class="ion-margin-bottom" lines="none">
+            <ion-list-header mode="md" color="tertiary">
+              <ion-label>
+                <h3>ยอมรับข้อตกลง
+                  <ion-text color="danger" *ngIf="isInvalid('isAgree')">
+                    คุณยังไม่เลือกการอนุญาตเข้าใช้งาน
+                  </ion-text>
+                </h3>
+              </ion-label>
+            </ion-list-header>
+            <ion-radio-group formControlName="isAgree" mode="md">
+              <ion-item color="tertiary">
+                <ion-label>
+                  <h3><b>อนุญาต</b></h3>
+                </ion-label>
+                <ion-radio slot="start" value="true"></ion-radio>
+              </ion-item>
+              <ion-item color="tertiary">
+                <ion-label>
+                  <h3><b>ปฏิเสธ</b></h3>
+                </ion-label>
+                <ion-radio slot="start" value="false"></ion-radio>
+              </ion-item>
+            </ion-radio-group>
+          </ion-list>
+        </ion-card>
+      </div>
+
+
+    </ng-container>
+
+    <ion-button id="app-form-submit" type="submit" color="danger" ion-button expand="full" no-margin>{{ buttonText }}
+    </ion-button>
+  </form>
+
+</ion-content>
