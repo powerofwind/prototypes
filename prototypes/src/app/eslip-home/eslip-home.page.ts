@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { MemoryService } from 'src/services/memory.service';
 
 @Component({
   selector: 'app-eslip-home',
@@ -16,10 +18,19 @@ export class EslipHomePage implements OnInit {
     loop: false,
     freeMode: true
   };
+  public isPay = false;
+  public isAgree = false;
 
-  constructor() { }
+  constructor(private memory: MemoryService, private router: Router) { }
 
   ngOnInit() {
+  }
+
+  ionViewDidEnter() {
+    console.log(this.memory.isPay);
+    
+    this.isPay = this.memory.isPay;
+    this.isAgree = this.memory.isAgree;
   }
 
 }

@@ -1,6 +1,7 @@
 import { Component, NgZone, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NavController } from '@ionic/angular';
+import { MemoryService } from 'src/services/memory.service';
 
 @Component({
   selector: 'app-consent',
@@ -9,15 +10,12 @@ import { NavController } from '@ionic/angular';
 })
 export class ConsentPage implements OnInit {
 
-  private mcontentid = "pay-m2";
   public isAgreementOpening: boolean = false;
   public isFirstTime: boolean = true;
   public fg: FormGroup;
   public buttonText: string = "อ่านแล้ว";
 
-  // , private storage: StorageDataProvider, private svc: IonManaLib
-  constructor(private fb: FormBuilder, private zone: NgZone, private navCtrl: NavController) {
-    // this.mapi = this.svc.initManaAPI(this.mcontentid);
+  constructor(private fb: FormBuilder, private zone: NgZone, private navCtrl: NavController, private memory: MemoryService) {
     this.fg = this.fb.group({
       'isAceeptAgreement': [null, Validators.required],
       'isSubscribe': true,
@@ -30,15 +28,12 @@ export class ConsentPage implements OnInit {
   }
 
   ionViewDidEnter() {
-    // this.mapi.initPageApi();
-    // this.mapi.validForm(true);
   }
 
   onOpenAgreement() {
     this.isAgreementOpening = true;
     this.zone.run(() => {
       this.buttonText = "อ่านแล้ว";
-      // this.mapi.initPageApi();
     });
   }
 
@@ -46,7 +41,6 @@ export class ConsentPage implements OnInit {
     this.isAgreementOpening = false;
     this.zone.run(() => {
       this.buttonText = "ยืนยัน";
-      // this.mapi.initPageApi();
     });
   }
 
@@ -62,7 +56,9 @@ export class ConsentPage implements OnInit {
     }
 
     if (this.fg.valid) {
-      // this.storage.isPassCondition = this.fg.get("isAgree").value == "true";
+      this.memory.isAgree = this.fg.get("isAgree").value;
+      this.memory.isPay = false;
+      console.log(this.memory.isPay);
       this.navCtrl.back({ animated: false });
     }
   }

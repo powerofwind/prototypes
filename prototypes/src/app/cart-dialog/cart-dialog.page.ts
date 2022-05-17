@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MemoryService } from 'src/services/memory.service';
 
 @Component({
   selector: 'app-cart-dialog',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CartDialogPage implements OnInit {
 
-  constructor() { }
+  constructor(private memory: MemoryService) { }
 
   ngOnInit() {
   }
 
+  ionViewDidEnter() {
+  }
+  
+  isPaying(){
+    this.memory.isPay = true;
+  }
 }

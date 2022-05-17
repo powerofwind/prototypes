@@ -12,41 +12,42 @@
 
   <ion-list class="ion-no-padding" lines="none">
     <ng-container>
-      <ion-item color="tertiary">
+      <ion-item color="tertiary" *ngIf="isAgree == undefined">
         <ion-icon name="alert-circle-outline" color="medium"></ion-icon>
         <ion-label class="ion-padding-start" color="medium"><b>เป็นสมาชิกของร้านเดี๋ยวก็ละลาย</b>
         </ion-label>
       </ion-item>
 
-      <ion-card color="tertiary" class="ion-padding-end ion-padding-bottom ion-card-description">
-        <ion-label color="medium">ผู้ใช้งานยินยอมเป็นสมาชิกของร้านเดี๋ยวก็ละลายเท่านั้น จึงจะได้รับส่วนลดในการชำระเงิน
-        </ion-label>
-        <p class="ion-no-margin">
-          <ion-text color="danger">สถานะรออนุมัติ</ion-text>
-        </p>
-      </ion-card>
-      <hr class="ion-no-margin">
-    </ng-container>
-
-    <!-- <ng-container>
-      <ion-item color="tertiary">
-
+      <ion-item color="tertiary" *ngIf="isAgree == 'true'">
         <ion-icon name="checkmark-circle-outline" color="primary"></ion-icon>
-        <ion-label class="ion-padding-start" color="primary"><b>ชื่อเงื่อนไข</b>
+        <ion-label class="ion-padding-start" color="primary"><b>เป็นสมาชิกของร้านเดี๋ยวก็ละลาย</b>
         </ion-label>
       </ion-item>
 
       <ion-card color="tertiary" class="ion-padding-end ion-padding-bottom ion-card-description">
-        <ion-label color="primary">รายละเอียด
-        </ion-label>
+        <div *ngIf="isAgree == undefined">
+          <ion-label color="medium">ผู้ใช้งานยินยอมเป็นสมาชิกของร้านเดี๋ยวก็ละลายเท่านั้น จึงจะได้รับส่วนลดในการชำระเงิน
+          </ion-label>
+          <p class="ion-no-margin">
+            <ion-text color="danger">สถานะ: รออนุมัติ</ion-text>
+          </p>
+        </div>
+
+        <div *ngIf="isAgree == 'true'">
+          <ion-label color="primary">ผู้ใช้งานยินยอมเป็นสมาชิกของร้านเดี๋ยวก็ละลายเท่านั้น
+            จึงจะได้รับส่วนลดในการชำระเงิน
+          </ion-label>
+          <p class="ion-no-margin">
+            <ion-text color="primary">สถานะ: รอยืนยันการชำระเงินค่าสมาชิก</ion-text>
+          </p>
+        </div>
       </ion-card>
-
       <hr class="ion-no-margin">
-    </ng-container> -->
-
+    </ng-container>
   </ion-list>
 
 </ion-content>
 <ion-footer>
-  <ion-button color="danger" class="ion-no-margin" expand="full" routerLink="/consent">ทำรายการที่ไม่ผ่านเงื่อนไข</ion-button>
+  <ion-button color="danger" class="ion-no-margin" expand="full" (click)="gotoPage()">ทำรายการที่ไม่ผ่านเงื่อนไข
+  </ion-button>
 </ion-footer>

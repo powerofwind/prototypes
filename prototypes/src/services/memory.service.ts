@@ -6,6 +6,8 @@ import { Injectable } from '@angular/core';
 export class MemoryService {
 
   public data: any;
+  public isAgree: boolean;
+  public isPay: boolean;
 
   constructor() { }
 }
