@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>คูปองส่วนลด</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content mode="ios">
+  <ion-list lines="none" class="ion-text-center">
+    <ion-item color="tertiary" class="ion-margin-top">
+      <ion-avatar slot="start">
+        <img src="'assets/imgs/logo.jpg'">
+      </ion-avatar>
+      <ion-label color="medium">
+        <ion-text color="dark"><b>เดี๋ยวก็ละลาย</b></ion-text>
+
+        <h3><img width="12" height="12" class="qr" src="assets/imgs/shop.png" />
+          data.distributerMerchant.name}}</h3>
+      </ion-label>
+    </ion-item>
+    <ion-card color="tertiary">
+      <img src="data.eslipStub.bannerImageUrl">
+    </ion-card>
+    <ion-item color="tertiary">
+      <ion-label color="dark">
+        <b>วันหมดอายุ : ฃdata.eslipStub.expiredDate | date:'d MMMM y H:mm'}}</b>
+        <ion-text color="medium">
+          <h3>
+            <img height="12" src="assets/imgs/shoplocation.png" />
+            data.distributerMerchant.fullAddress}}
+          </h3>
+        </ion-text>
+      </ion-label>
+    </ion-item>
+    <ion-item color="tertiary" class="ion-margin-top">
+      <ion-label>
+        <b>รายละเอียดคูปอง</b>
+        <ion-text class="ion-text-wrap">
+          <h3>data.eslipStub.description}}</h3>
+        </ion-text>
+      </ion-label>
+    </ion-item>
+    <ion-item color="tertiary">
+      <ion-label>
+        <b>เงื่อนไขคูปอง</b>
+        <ion-text class="ion-text-wrap">
+          <h3>data.eslipStub.condition}}</h3>
+        </ion-text>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-button color="danger" class="ion-no-margin" expand="full" routerLink="/condition">ตกลง</ion-button>
+</ion-footer>

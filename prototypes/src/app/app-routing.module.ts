@@ -74,6 +74,34 @@ const routes: Routes = [
     path: 'home-template',
     loadChildren: () => import('./home-template/home-template.module').then( m => m.HomeTemplatePageModule)
   },
+  {
+    path: 'eslip-detail',
+    loadChildren: () => import('./eslip-detail/eslip-detail.module').then( m => m.EslipDetailPageModule)
+  },
+  {
+    path: 'condition',
+    loadChildren: () => import('./condition/condition.module').then( m => m.ConditionPageModule)
+  },
+  {
+    path: 'consent',
+    loadChildren: () => import('./consent/consent.module').then( m => m.ConsentPageModule)
+  },
+  {
+    path: 'cart-edit',
+    loadChildren: () => import('./cart-edit/cart-edit.module').then( m => m.CartEditPageModule)
+  },
+  {
+    path: 'cart-checkout',
+    loadChildren: () => import('./cart-checkout/cart-checkout.module').then( m => m.CartCheckoutPageModule)
+  },
+  {
+    path: 'cart-dialog',
+    loadChildren: () => import('./cart-dialog/cart-dialog.module').then( m => m.CartDialogPageModule)
+  },
+  {
+    path: 'eslip-home',
+    loadChildren: () => import('./eslip-home/eslip-home.module').then( m => m.EslipHomePageModule)
+  },
 
 
 ];
