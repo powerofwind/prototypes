@@ -27,8 +27,6 @@ export class EslipHomePage implements OnInit {
   }
 
   ionViewDidEnter() {
-    console.log(this.memory.isPay);
-    
     this.isPay = this.memory.isPay;
     this.isAgree = this.memory.isAgree;
   }

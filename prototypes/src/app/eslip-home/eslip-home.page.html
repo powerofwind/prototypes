@@ -8,7 +8,7 @@
       <!-- Do not forget implement slideOpts's value in typescript -->
       <ion-slides [options]="slideOpts">
 
-        <ion-slide class="ion-no-margin">
+        <!-- <ion-slide class="ion-no-margin">
           <ion-item class="ion-text-center ion-no-padding shortcut ion-no-margin" color="light" lines="none">
             <ion-label class="ion-no-padding ion-no-margin ion-text-center">
               <ion-text>
@@ -29,7 +29,7 @@
               <h4><small>ชื่อร้านค้า</small></h4>
             </ion-label>
           </ion-item>
-        </ion-slide>
+        </ion-slide> -->
 
       </ion-slides>
     </ion-col>
@@ -80,11 +80,10 @@
           </ion-row>
         </ion-grid>
       </ion-item>
-
     </ion-item-sliding>
 
     <ion-item-sliding color="danger" *ngIf="isPay == true" routerLink="/memeber">
-      <ion-item button color="tertiary" class="ion-no-padding" routerLink="/cart-edit">
+      <ion-item button color="tertiary" class="ion-no-padding">
         <ion-grid class="ion-no-padding text-hidden">
 
           <ion-row class="ion-no-padding ion-align-items-center ion-padding-start ion-padding-vertical">

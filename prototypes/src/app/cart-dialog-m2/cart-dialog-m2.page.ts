@@ -21,13 +21,13 @@ export class CartDialogM2Page implements OnInit {
 
   isPaying(){
     this.memory.isPayM2 = true;
-    this.router.navigate(['/condition-m2']);
+    // this.router.navigate(['/condition-m2']);
 
-    // if (this.isHomeM2) {
-    //   this.router.navigate(['/eslip-detail-m2']);
-    // }
-    // else{
-    //   this.router.navigate(['/condition-m2']);
-    // }
+    if (this.isHomeM2) {
+      this.router.navigate(['/eslip-home-m2']);
+    }
+    else{
+      this.router.navigate(['/condition-m2']);
+    }
   }
 }

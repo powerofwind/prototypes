@@ -26,7 +26,7 @@ export class ConditionPage implements OnInit {
       this.router.navigate(['/consent']);
     }
     else{
-      this.router.navigate(['/eslip-detail']);
+      this.router.navigate(['/memeber']);
     }
   }
 
