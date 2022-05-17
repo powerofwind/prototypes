@@ -56,9 +56,8 @@ export class ConsentM2Page implements OnInit {
     }
 
     if (this.fg.valid) {
-      this.memory.isAgree = this.fg.get("isAgree").value;
-      this.memory.isPay = false;
-      console.log(this.memory.isPay);
+      this.memory.isAgreeM2 = this.fg.get("isAgree").value;
+      this.memory.isPayM2 = false;
       this.navCtrl.back({ animated: false });
     }
   }
