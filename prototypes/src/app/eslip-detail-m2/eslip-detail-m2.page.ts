@@ -23,16 +23,22 @@ export class EslipDetailM2Page implements OnInit {
     this.isAgree = this.memory.isAgreeM2;
     this.buttonDisplayText();
   }
-  // [routerLink]="['/condition-m2']"
+
   gotoPage() {
     if (this.isPay == true && this.isAgree) {
       const alert = document.createElement('ion-alert');
       alert.cssClass = 'my-custom-class';
-      // alert.header = 'Alert';
-      // alert.subHeader = 'Subtitle';
-      alert.message = 'รับคูปองสำเร็จ';
-      alert.buttons = ['ปิด'];
-
+      alert.header = 'รับคูปองสำเร็จ';
+      // alert.message = 'รับคูปองสำเร็จ';
+      alert.buttons = [
+        {
+          text: 'ปิด',
+          id: 'confirm-button',
+          handler: () => {
+            this.router.navigate(['/eslip-home-m3']);
+          }
+        }
+      ];
       document.body.appendChild(alert);
       return alert.present();
     }

@@ -138,6 +138,10 @@ const routes: Routes = [
     path: 'consent-m3',
     loadChildren: () => import('./consent-m3/consent-m3.module').then( m => m.ConsentM3PageModule)
   },
+  {
+    path: 'eslip-home-m3',
+    loadChildren: () => import('./eslip-home-m3/eslip-home-m3.module').then( m => m.EslipHomeM3PageModule)
+  },
 
 
 ];
