@@ -33,7 +33,7 @@ export class EslipHomeM2Page implements OnInit {
 
   gotoPage(){
     this.memory.isHomeM2 = true;
-    this.router.navigate(['/cart-edit-m2']);
+    this.router.navigate(['/condition-m2']);
   }
 
 }
