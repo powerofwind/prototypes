@@ -83,6 +83,7 @@
     </ng-container>
   </ion-list>
 
+  <ion-label *ngIf="isAgree == 'true'" [routerLink]="['/eslip-home-m2']">Home</ion-label>
 </ion-content>
 <ion-footer>
   <ion-button color="danger" class="ion-no-margin" expand="full" (click)="gotoPage()">{{text}}
