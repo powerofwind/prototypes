@@ -13,7 +13,6 @@ import { FormTemplatePage } from './form-template.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    ReactiveFormsModule,
     FormTemplatePageRoutingModule
   ],
   declarations: [FormTemplatePage]
