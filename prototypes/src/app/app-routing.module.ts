@@ -74,6 +74,14 @@ const routes: Routes = [
     path: 'home-template',
     loadChildren: () => import('./home-template/home-template.module').then( m => m.HomeTemplatePageModule)
   },
+  {
+    path: 'condition-timer-template',
+    loadChildren: () => import('./condition-timer-template/condition-timer-template.module').then( m => m.ConditionTimerTemplatePageModule)
+  },
+  {
+    path: 'consent-register-template',
+    loadChildren: () => import('./consent-register-template/consent-register-template.module').then( m => m.ConsentRegisterTemplatePageModule)
+  },
 
 
 ];

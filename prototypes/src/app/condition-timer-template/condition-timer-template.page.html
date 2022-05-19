@@ -81,7 +81,19 @@
 
   </ion-list>
 
+
 </ion-content>
 <ion-footer class="ion-no-border">
-  <ion-button color="danger" class="ion-no-margin" expand="full" type="submit">ทำรายการที่ไม่ผ่านเงื่อนไข</ion-button>
+
+  <ion-card class="ion-padding ion-text-end" *ngIf="isShowNextStepTimer">
+    <ion-card-content class="ion-text-center">
+      <ion-label color="medium">ดำเนินการอัตโนมัติใน {{ displayNextStepTime }} วินาที</ion-label>
+      <ion-icon class="close-icon ion-margin-start" name="close-outline" color="dark" (click)="onStopNextStep()"
+        size="large">
+      </ion-icon>
+    </ion-card-content>
+    <ion-progress-bar class="progress-outer" value="{{ nextStepProgressBar }}"></ion-progress-bar>
+  </ion-card>
+
+  <ion-button color="danger" class="ion-no-margin" expand="full" type="submit" (click)="onSelectNavigationNextStep()">ทำรายการที่ไม่ผ่านเงื่อนไข</ion-button>
 </ion-footer>
