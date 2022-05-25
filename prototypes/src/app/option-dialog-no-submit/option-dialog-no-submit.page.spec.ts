@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { MemoryPage } from './memory.page';
+import { OptionDialogNoSubmitPage } from './option-dialog-no-submit.page';
 
-describe('MemoryPage', () => {
-  let component: MemoryPage;
-  let fixture: ComponentFixture<MemoryPage>;
+describe('OptionDialogNoSubmitPage', () => {
+  let component: OptionDialogNoSubmitPage;
+  let fixture: ComponentFixture<OptionDialogNoSubmitPage>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ MemoryPage ],
+      declarations: [ OptionDialogNoSubmitPage ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(MemoryPage);
+    fixture = TestBed.createComponent(OptionDialogNoSubmitPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

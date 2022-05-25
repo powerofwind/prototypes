@@ -34,17 +34,14 @@ const routes: Routes = [
   {
     path: 'form-binding',
     loadChildren: () => import('./form-binding/form-binding.module').then( m => m.FormBindingPageModule)
-  },  {
+  },
+  {
     path: 'form-send-data',
     loadChildren: () => import('./form-send-data/form-send-data.module').then( m => m.FormSendDataPageModule)
   },
   {
     path: 'form-receive-data',
     loadChildren: () => import('./form-receive-data/form-receive-data.module').then( m => m.FormReceiveDataPageModule)
-  },
-  {
-    path: 'memory',
-    loadChildren: () => import('./memory/memory.module').then( m => m.MemoryPageModule)
   },
   {
     path: 'list-template',
@@ -81,6 +78,21 @@ const routes: Routes = [
   {
     path: 'consent-register-template',
     loadChildren: () => import('./consent-register-template/consent-register-template.module').then( m => m.ConsentRegisterTemplatePageModule)
+  },
+  {
+    path: 'option-dialog-binding',
+    loadChildren: () => import('./option-dialog-binding/option-dialog-binding.module').then( m => m.OptionDialogBindingPageModule)
+  },
+  {
+    path: 'form-confirm-dialog',
+    loadChildren: () => import('./form-confirm-dialog/form-confirm-dialog.module').then( m => m.FormConfirmDialogPageModule)
+  },
+  {
+    path: 'form-service',
+    loadChildren: () => import('./form-service/form-service.module').then( m => m.FormServicePageModule)
+  },  {
+    path: 'option-dialog-no-submit',
+    loadChildren: () => import('./option-dialog-no-submit/option-dialog-no-submit.module').then( m => m.OptionDialogNoSubmitPageModule)
   },
   {
     path: 'eslip-detail',

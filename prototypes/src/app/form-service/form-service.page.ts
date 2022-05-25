@@ -3,11 +3,11 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { MemoryService } from 'src/services/memory.service';
 
 @Component({
-  selector: 'app-memory',
-  templateUrl: './memory.page.html',
-  styleUrls: ['./memory.page.scss'],
+  selector: 'app-form-service',
+  templateUrl: './form-service.page.html',
+  styleUrls: ['./form-service.page.scss'],
 })
-export class MemoryPage implements OnInit {
+export class FormServicePage implements OnInit {
 
   public fg: FormGroup;
   public isFirstTime: boolean = true;
