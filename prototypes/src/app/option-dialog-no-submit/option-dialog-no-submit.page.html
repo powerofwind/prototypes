@@ -1,0 +1,24 @@
+<ion-content mode="ios" color="tertiary">
+
+  <ion-list lines="inset">
+    <ion-list-header mode="md">
+      <ion-label>เลือกรายการ</ion-label>
+    </ion-list-header>
+    <ion-item *ngFor="let item of data" color="tertiary">
+      <ion-avatar slot="start">
+        <img [src]="item.logo">
+      </ion-avatar>
+      <ion-label>
+        <b>{{ item.name }}</b>
+        <ion-text color="medium">
+          <h3>{{ item.option }}</h3>
+        </ion-text>
+      </ion-label>
+      <ion-label slot="end" color="medium" (click)="onSelectItem(item)">เลือก</ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
+<ion-footer class="ion-no-border ion-text-right">
+  <ion-button type="button" color="medium" ion-button fill="clear" (click)="onDismiss()"><b>ยกเลิก</b></ion-button>
+</ion-footer>

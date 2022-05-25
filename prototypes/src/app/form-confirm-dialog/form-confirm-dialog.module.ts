@@ -4,9 +4,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { MemoryPageRoutingModule } from './memory-routing.module';
+import { FormConfirmDialogPageRoutingModule } from './form-confirm-dialog-routing.module';
 
-import { MemoryPage } from './memory.page';
+import { FormConfirmDialogPage } from './form-confirm-dialog.page';
 
 @NgModule({
   imports: [
@@ -14,8 +14,8 @@ import { MemoryPage } from './memory.page';
     FormsModule,
     IonicModule,
     ReactiveFormsModule,
-    MemoryPageRoutingModule
+    FormConfirmDialogPageRoutingModule
   ],
-  declarations: [MemoryPage]
+  declarations: [FormConfirmDialogPage]
 })
-export class MemoryPageModule {}
+export class FormConfirmDialogPageModule {}
