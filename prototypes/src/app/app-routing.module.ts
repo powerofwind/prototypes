@@ -90,33 +90,14 @@ const routes: Routes = [
   {
     path: 'form-service',
     loadChildren: () => import('./form-service/form-service.module').then( m => m.FormServicePageModule)
-  },  {
+  },
+  {
     path: 'option-dialog-no-submit',
     loadChildren: () => import('./option-dialog-no-submit/option-dialog-no-submit.module').then( m => m.OptionDialogNoSubmitPageModule)
   },
   {
-    path: 'eslip-detail',
-    loadChildren: () => import('./eslip-detail/eslip-detail.module').then( m => m.EslipDetailPageModule)
-  },
-  {
-    path: 'condition',
-    loadChildren: () => import('./condition/condition.module').then( m => m.ConditionPageModule)
-  },
-  {
     path: 'consent',
     loadChildren: () => import('./consent/consent.module').then( m => m.ConsentPageModule)
-  },
-  {
-    path: 'cart-edit',
-    loadChildren: () => import('./cart-edit/cart-edit.module').then( m => m.CartEditPageModule)
-  },
-  {
-    path: 'cart-checkout',
-    loadChildren: () => import('./cart-checkout/cart-checkout.module').then( m => m.CartCheckoutPageModule)
-  },
-  {
-    path: 'cart-dialog',
-    loadChildren: () => import('./cart-dialog/cart-dialog.module').then( m => m.CartDialogPageModule)
   },
   {
     path: 'eslip-home',
@@ -153,10 +134,6 @@ const routes: Routes = [
   {
     path: 'eslip-home-m2',
     loadChildren: () => import('./eslip-home-m2/eslip-home-m2.module').then( m => m.EslipHomeM2PageModule)
-  },
-  {
-    path: 'consent-m3',
-    loadChildren: () => import('./consent-m3/consent-m3.module').then( m => m.ConsentM3PageModule)
   },
   {
     path: 'eslip-home-m3',
