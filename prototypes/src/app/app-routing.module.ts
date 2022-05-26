@@ -162,6 +162,14 @@ const routes: Routes = [
     path: 'eslip-home-m3',
     loadChildren: () => import('./eslip-home-m3/eslip-home-m3.module').then( m => m.EslipHomeM3PageModule)
   },
+  {
+    path: 'topup-list',
+    loadChildren: () => import('./topup-list/topup-list.module').then( m => m.TopupListPageModule)
+  },
+  {
+    path: 'topup-confirm',
+    loadChildren: () => import('./topup-confirm/topup-confirm.module').then( m => m.TopupConfirmPageModule)
+  },
 
 
 ];
