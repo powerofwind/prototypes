@@ -1,0 +1,135 @@
+<ion-content mode="ios">
+  <ion-card color="tertiary" class="ion-margin-top">
+    <ion-card-content class="text-indent">
+      <ion-label>
+        เนื่องจากจำนวนเงินในกระเป๋าไม่พอจ่าย จึงจำเป็นที่จะต้องผ่านเงื่อนไขที่กล่าวมาทั้งหมด จึงจะสามารถดำเนินการถัดไปได้
+        กรุณาทำให้ผ่านทุกรายการที่กล่าวมา
+      </ion-label>
+    </ion-card-content>
+  </ion-card>
+  <hr class="ion-no-margin">
+
+  <ion-list class="ion-no-padding" lines="none">
+    <!-- ยืนยันตัวตน -->
+    <ng-container>
+      <ion-item color="tertiary" *ngIf="isKYC == undefined">
+        <ion-icon name="alert-circle-outline" color="medium"></ion-icon>
+        <ion-label class="ion-padding-start" color="medium"><b>ยืนยันตัวตนขั้นพื้นฐาน</b>
+        </ion-label>
+      </ion-item>
+
+      <ion-item color="tertiary" *ngIf="isKYC">
+        <ion-icon name="checkmark-circle-outline" color="primary"></ion-icon>
+        <ion-label class="ion-padding-start" color="primary"><b>ยืนยันตัวตนขั้นพื้นฐาน</b>
+        </ion-label>
+      </ion-item>
+
+      <ion-card color="tertiary" class="ion-padding-end ion-padding-bottom ion-card-description">
+        <div *ngIf="isKYC == undefined">
+          <ion-label color="medium">ผู้ใช้งานยินยอมเป็นสมาชิกของร้านเดี๋ยวก็ละลายเท่านั้น จึงจะได้รับส่วนลดในการชำระเงิน
+          </ion-label>
+          <p class="ion-no-margin">
+            <ion-text color="medium">สถานะ: รอดำเนินการ</ion-text>
+          </p>
+        </div>
+
+        <div *ngIf="isKYC">
+          <ion-label color="primary">ผู้ใช้งานยินยอมเป็นสมาชิกของร้านเดี๋ยวก็ละลายเท่านั้น
+            จึงจะได้รับส่วนลดในการชำระเงิน
+          </ion-label>
+          <p class="ion-no-margin">
+            <ion-text color="primary">สถานะ: ดำเนินการเรียบร้อย</ion-text>
+          </p>
+        </div>
+      </ion-card>
+      <hr class="ion-no-margin">
+    </ng-container>
+
+
+    <!-- เพิ่มบัญชี -->
+    <ng-container>
+      <ion-item color="tertiary" *ngIf="isCreateAcc == undefined || isPay == false">
+        <ion-icon name="alert-circle-outline" color="medium"></ion-icon>
+        <ion-label class="ion-padding-start" color="medium"><b>เพิ่มบัญชีของฉัน</b>
+        </ion-label>
+      </ion-item>
+
+      <ion-item color="tertiary" *ngIf="isCreateAcc == true">
+        <ion-icon name="checkmark-circle-outline" color="primary"></ion-icon>
+        <ion-label class="ion-padding-start" color="primary"><b>เพิ่มบัญชีของฉัน</b>
+        </ion-label>
+      </ion-item>
+
+      <ion-card color="tertiary" class="ion-padding-end ion-padding-bottom ion-card-description">
+        <div *ngIf="isCreateAcc == undefined || isCreateAcc == false">
+          <ion-label color="medium">ผู้ใช้งานยินยอมเป็นสมาชิกของร้านเดี๋ยวก็ละลายเท่านั้น จึงจะได้รับส่วนลดในการชำระเงิน
+          </ion-label>
+          <p class="ion-no-margin">
+            <ion-text color="medium">สถานะ: รอยืนยันการชำระเงินค่าสมาชิก</ion-text>
+          </p>
+        </div>
+
+        <div *ngIf="isCreateAcc == true">
+          <ion-label color="primary">ผู้ใช้งานยินยอมเป็นสมาชิกของร้านเดี๋ยวก็ละลายเท่านั้น
+            จึงจะได้รับส่วนลดในการชำระเงิน
+          </ion-label>
+          <p class="ion-no-margin">
+            <ion-text color="primary">สถานะ: จ่ายเงินค่าสมัครสมาชิกเรียบร้อย</ion-text>
+          </p>
+        </div>
+      </ion-card>
+      <hr class="ion-no-margin">
+    </ng-container>
+
+    <!-- เติมเงิน -->
+    <ng-container>
+      <ion-item color="tertiary" *ngIf="isTopUp == undefined || isTopUp == false">
+        <ion-icon name="alert-circle-outline" color="medium"></ion-icon>
+        <ion-label class="ion-padding-start" color="medium"><b>เติมเงินเข้ากระเป๋าเงิน</b>
+        </ion-label>
+      </ion-item>
+
+      <ion-item color="tertiary" *ngIf="isTopUp">
+        <ion-icon name="checkmark-circle-outline" color="primary"></ion-icon>
+        <ion-label class="ion-padding-start" color="primary"><b>เติมเงินเข้ากระเป๋าเงิน</b>
+        </ion-label>
+      </ion-item>
+
+      <ion-card color="tertiary" class="ion-padding-end ion-padding-bottom ion-card-description">
+        <div *ngIf="isTopUp == undefined || isTopUp == false">
+          <ion-label color="medium">ผู้ใช้งานต้องเติมเงินเข้ากระเป๋าเงินกอ่น จึงจะสามารถดำเนินการชำระเงินต่อไปได้
+          </ion-label>
+          <p class="ion-no-margin">
+            <ion-text color="medium">สถานะ: รอเติมเงินเข้ากระเป๋า</ion-text>
+          </p>
+        </div>
+
+        <div *ngIf="isTopUp == true">
+          <ion-label color="primary">ผู้ใช้งานต้องเติมเงินเข้ากระเป๋าเงินกอ่น จึงจะสามารถดำเนินการชำระเงินต่อไปได้
+          </ion-label>
+          <p class="ion-no-margin">
+            <ion-text color="primary">สถานะ: รอเติมเงินเข้ากระเป๋า</ion-text>
+          </p>
+        </div>
+      </ion-card>
+      <hr class="ion-no-margin">
+    </ng-container>
+  </ion-list>
+  <!-- <ion-label *ngIf="isAgree == 'true'" [routerLink]="['/eslip-home-m2']">Home</ion-label> -->
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-card class="ion-padding ion-text-end" *ngIf="isShowNextStepTimer">
+    <ion-card-content class="ion-text-center">
+      <ion-label color="medium">ดำเนินการอัตโนมัติใน {{ displayNextStepTime }} วินาที</ion-label>
+      <ion-icon class="close-icon ion-margin-start" name="close-outline" color="dark" (click)="onStopNextStep()"
+        size="large">
+      </ion-icon>
+    </ion-card-content>
+    <ion-progress-bar class="progress-outer" value="{{ nextStepProgressBar }}"></ion-progress-bar>
+  </ion-card>
+
+
+  <ion-button color="danger" class="ion-no-margin" expand="full" (click)="navigationNextStep()">{{text}}
+  </ion-button>
+</ion-footer>

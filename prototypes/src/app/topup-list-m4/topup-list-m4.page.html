@@ -1,0 +1,44 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>เติมเงิน</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content mode="ios">
+
+  <ng-container>
+    <ion-item color="tertiary" lines="none" class="qrStyle ion-padding-vertical" routerLink="/topup-confirm-m4">
+      <ion-avatar slot="start" class="avatar-m non-circle">
+        <img class="non-circle" src="assets/imgs/topqr.png" />
+      </ion-avatar>
+      <ion-label>
+        สร้างคิวอาร์โค้ดเพื่อเติมเงิน
+      </ion-label>
+    </ion-item>
+
+    <ion-list lines="none">
+      <ion-list-header lines="none" mode="md">
+        <ion-label>เลือกบัญชีที่ผูกไว้</ion-label>
+      </ion-list-header>
+      <ion-item button detail="false" class="ion-margin-bottom" color="tertiary" routerLink="/topup-confirm-m4">
+        <ion-avatar slot="start" class="avatar-s non-circle">
+          <img src="assets/imgs/PromtPay.png" />
+        </ion-avatar>
+        <ion-label color="medium">
+          <ion-text color="dark"><b>พร้อมเพย์ของฉัน</b></ion-text>
+          <h4>******7715</h4>
+        </ion-label>
+      </ion-item>
+      <ion-item button detail="false" class="ion-margin-bottom" color="tertiary" routerLink="/topup-confirm-m4">
+        <ion-avatar slot="start" class="avatar-s non-circle">
+          <img src="assets/imgs/kbank.png" />
+        </ion-avatar>
+        <ion-label color="medium">
+          <ion-text color="dark"><b>บัญชีกสิกร</b></ion-text>
+          <h4>******3387</h4>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ng-container>
+</ion-content>

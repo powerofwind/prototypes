@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AlertController } from "@ionic/angular";
+import { AlertController } from '@ionic/angular';
 import { MemoryService } from 'src/services/memory.service';
 
-
 @Component({
-  selector: 'app-topup-confirm',
-  templateUrl: './topup-confirm.page.html',
-  styleUrls: ['./topup-confirm.page.scss'],
+  selector: 'app-topup-confirm-m4',
+  templateUrl: './topup-confirm-m4.page.html',
+  styleUrls: ['./topup-confirm-m4.page.scss'],
 })
-export class TopupConfirmPage implements OnInit {
+export class TopupConfirmM4Page implements OnInit {
 
   constructor(private alertController: AlertController, private router: Router, private memory: MemoryService) { }
 
@@ -17,13 +16,10 @@ export class TopupConfirmPage implements OnInit {
   }
 
   onSave() {
-
     this.presentAlertConfirm();
-
   }
 
   async presentAlertConfirm() {
-
     let msgTopic = `<ion-label>กำลังส่งคำขอเติมเงินไปยัง</ion-label>`;
     let msgIcon = `<div class="ion-padding"><img class="circle logo-l" src="assets/imgs/icontopup.png" /></div>`
     let msgBottom = `<p class="ion-no-margin">พร้อมเพย์ 0911234567</p>`;
@@ -35,19 +31,14 @@ export class TopupConfirmPage implements OnInit {
       message: alertMsg,
       buttons: [
         {
-          text: "ยกเลิก",
-          role: "cancel",
-          id: "cancel-button",
-          handler: () => {
-            // Do something when click cancel button
-          }
-        }, {
-          text: "ตกลง",
+          text: "ปิด",
           role: "confirm",
           id: "confirm-button",
           handler: () => {
             this.memory.isTopUp = true;
-            this.router.navigate(['/condition-topup']);
+            console.log(this.memory.isTopUp );
+            
+            this.router.navigate(['/cart-checkout-m4']);
           }
         }
       ]
@@ -55,5 +46,6 @@ export class TopupConfirmPage implements OnInit {
 
     await alert.present();
   }
+
 
 }

@@ -10,7 +10,9 @@ export class MemoryService {
   public isPay: boolean;
   public isAgreeM2: boolean;
   public isPayM2: boolean;
+  public isPayM3: boolean;
   public isHomeM2: boolean;
+  public isTopUp: boolean;
 
   constructor() { }
 }

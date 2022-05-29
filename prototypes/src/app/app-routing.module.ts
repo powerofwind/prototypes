@@ -147,6 +147,55 @@ const routes: Routes = [
     path: 'topup-confirm',
     loadChildren: () => import('./topup-confirm/topup-confirm.module').then( m => m.TopupConfirmPageModule)
   },
+  {
+    path: 'condition-m3',
+    loadChildren: () => import('./condition-m3/condition-m3.module').then( m => m.ConditionM3PageModule)
+  },
+  {
+    path: 'condition-topup',
+    loadChildren: () => import('./condition-topup/condition-topup.module').then( m => m.ConditionTopupPageModule)
+  },
+  {
+    path: 'cart-edit-m3',
+    loadChildren: () => import('./cart-edit-m3/cart-edit-m3.module').then( m => m.CartEditM3PageModule)
+  },
+  {
+    path: 'cart-checkout-m3',
+    loadChildren: () => import('./cart-checkout-m3/cart-checkout-m3.module').then( m => m.CartCheckoutM3PageModule)
+  },
+  {
+    path: 'cart-dialog-m3',
+    loadChildren: () => import('./cart-dialog-m3/cart-dialog-m3.module').then( m => m.CartDialogM3PageModule)
+  },
+  {
+    path: 'cart-checkout-m4',
+    loadChildren: () => import('./cart-checkout-m4/cart-checkout-m4.module').then( m => m.CartCheckoutM4PageModule)
+  },
+  // {
+  //   path: 'cart-checkout-m4',
+  //   loadChildren: () => import('./cart-checkout-m4/cart-checkout-m4.module').then( m => m.CartCheckoutM5PageModule)
+  // },
+  {
+    path: 'topup-list-m4',
+    loadChildren: () => import('./topup-list-m4/topup-list-m4.module').then( m => m.TopupListM4PageModule)
+  },
+  {
+    path: 'topup-confirm-m4',
+    loadChildren: () => import('./topup-confirm-m4/topup-confirm-m4.module').then( m => m.TopupConfirmM4PageModule)
+  },
+  {
+    path: 'cart-dialog-m4',
+    loadChildren: () => import('./cart-dialog-m4/cart-dialog-m4.module').then( m => m.CartDialogM4PageModule)
+  },  {
+    path: 'condition-m4',
+    loadChildren: () => import('./condition-m4/condition-m4.module').then( m => m.ConditionM4PageModule)
+  },
+  {
+    path: 'eslip-detail-m4',
+    loadChildren: () => import('./eslip-detail-m4/eslip-detail-m4.module').then( m => m.EslipDetailM4PageModule)
+  },
+
+
 
 
 ];

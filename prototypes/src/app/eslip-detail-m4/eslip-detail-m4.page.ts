@@ -3,11 +3,11 @@ import { Router } from '@angular/router';
 import { MemoryService } from 'src/services/memory.service';
 
 @Component({
-  selector: 'app-eslip-detail-m2',
-  templateUrl: './eslip-detail-m2.page.html',
-  styleUrls: ['./eslip-detail-m2.page.scss'],
+  selector: 'app-eslip-detail-m4',
+  templateUrl: './eslip-detail-m4.page.html',
+  styleUrls: ['./eslip-detail-m4.page.scss'],
 })
-export class EslipDetailM2Page implements OnInit {
+export class EslipDetailM4Page implements OnInit {
 
   public isPay = false;
   public isPay3 = false;
@@ -20,14 +20,14 @@ export class EslipDetailM2Page implements OnInit {
   }
 
   ionViewDidEnter() {
-    this.isPay = this.memory.isPayM2;
-    this.isPay3 = this.memory.isPayM3;
-    this.isAgree = this.memory.isAgreeM2;
+    this.isPay = true;
+    // this.isPay3 = this.memory.isPayM3;
+    // this.isAgree = this.memory.isAgreeM2;
     this.buttonDisplayText();
   }
 
   gotoPage() {
-    if (this.isPay == true && this.isAgree || this.isPay3 == true) {
+    if (this.isPay) {
       const alert = document.createElement('ion-alert');
       alert.cssClass = 'my-custom-class';
       alert.header = 'รับคูปองสำเร็จ';
@@ -57,5 +57,6 @@ export class EslipDetailM2Page implements OnInit {
       this.text = "รับคูปอง"
     }
   }
+
 
 }
