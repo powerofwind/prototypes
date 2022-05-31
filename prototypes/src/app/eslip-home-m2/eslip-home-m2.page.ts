@@ -19,7 +19,7 @@ export class EslipHomeM2Page implements OnInit {
     freeMode: true
   };
   public isPay = false;
-  public isAgree = false;
+  // public isAgree = false;
 
   constructor(private memory: MemoryService, private router: Router) { }
 
@@ -27,13 +27,13 @@ export class EslipHomeM2Page implements OnInit {
   }
 
   ionViewDidEnter() {
-    this.isPay = this.memory.isPayM2;
-    this.isAgree = this.memory.isAgreeM2;
+    this.isPay = false;
+    // this.isAgree = this.memory.isAgreeM2;
   }
 
   gotoPage(){
-    this.memory.isHomeM2 = true;
-    this.router.navigate(['/condition-m2']);
+    // this.memory.isHomeM2 = true;
+    this.router.navigate(['/condition-m3']);
   }
 
 }

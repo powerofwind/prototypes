@@ -13,6 +13,7 @@ export class MemoryService {
   public isPayM3: boolean;
   public isHomeM2: boolean;
   public isTopUp: boolean;
+  public isWaiting: boolean;
 
   constructor() { }
 }

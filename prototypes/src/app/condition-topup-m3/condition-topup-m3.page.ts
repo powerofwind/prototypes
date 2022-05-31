@@ -1,19 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AlertController } from '@ionic/angular';
 import { MemoryService } from 'src/services/memory.service';
 
 @Component({
-  selector: 'app-condition-topup',
-  templateUrl: './condition-topup.page.html',
-  styleUrls: ['./condition-topup.page.scss'],
+  selector: 'app-condition-topup-m3',
+  templateUrl: './condition-topup-m3.page.html',
+  styleUrls: ['./condition-topup-m3.page.scss'],
 })
-export class ConditionTopupPage implements OnInit {
+export class ConditionTopupM3Page implements OnInit {
 
   public isKYC: boolean = true
   public isCreateAcc: boolean = true
   public isTopUp: boolean = false
-  public isWaiting: boolean;
+  public isWaiting: boolean = false
   public text: string;
 
   private progressBarTimer: NodeJS.Timer;
@@ -22,7 +21,7 @@ export class ConditionTopupPage implements OnInit {
   public displayNextStepTime: number;
   public nextStepProgressBar: number;
 
-  constructor(private memory: MemoryService, private router: Router,private alertController: AlertController) {
+  constructor(private memory: MemoryService, private router: Router) {
   }
 
   ngOnInit() {
@@ -33,25 +32,24 @@ export class ConditionTopupPage implements OnInit {
     this.isCreateAcc = true
     this.isTopUp = this.memory.isTopUp;
     this.isWaiting = this.memory.isWaiting;
-    console.log(this.isWaiting);
     this.buttonDisplayText();
 
     this.resetTimer(true);
-    if ((this.isCreateAcc && !this.isTopUp) || (this.isTopUp && !this.isWaiting)) {
-      this.startTimerNextStep();
-    }
+    // this.startTimerNextStep();
 
   }
 
   buttonDisplayText() {
-    console.log("isTopUp",this.isTopUp);
-    console.log("isWaiting",this.isWaiting);
+    console.log(this.isWaiting);
+
+    // if (((this.isTopUp == false) || (this.isTopUp == undefined) )|| this.isWaiting == true) {
     if (this.isWaiting == true && this.isTopUp) {
+      console.log("1111");
       this.text = "ทำรายการที่ไม่ผ่านเงื่อนไข"
+      console.log(this.text);
+      
     }
-    else{
-      this.text = "ทำรายการต่อ"
-    }
+    this.text = "ทำรายการต่อ"
   }
 
   ionViewWillLeave() {
@@ -69,14 +67,22 @@ export class ConditionTopupPage implements OnInit {
 
   public navigationNextStep() {
     this.resetTimer(false);
+    // if (this.isAgree == false || this.isAgree == undefined) {
+    //   this.router.navigate(['/consent-m2']);
+    // }
+    console.log(this.isTopUp);
+
     if (this.isCreateAcc && !this.isTopUp) {
-      this.router.navigate(['/topup-list'], { skipLocationChange: true });
-    }
-    else if (this.isTopUp && this.isWaiting) {
+      console.log("111");
       this.router.navigate(['/topup-list']);
     }
     else if (this.isTopUp && !this.isWaiting) {
+      console.log("222");
       this.router.navigate(['/cart-checkout-m3']);
+    }
+    else if (this.isWaiting && this.isWaiting) {
+      console.log("33");
+      this.router.navigate(['/topup-list']);
     }
   }
 
@@ -106,31 +112,5 @@ export class ConditionTopupPage implements OnInit {
     this.nextStepProgressBar = 0;
     this.displayNextStepTime = this.nexStepTime;
   }
-
-  async openDlg(){
-    let msgTopic = `<ion-label>เติมเงินสำเร็จ</ion-label>`;
-    let msgIcon = `<div class="ion-padding"><img class="circle logo-l" src="assets/imgs/iconsuccess.png" /></div>`
-    let msgBottom = `<p class="ion-no-margin">100 บาท</p>`;
-    let alertMsg = `<div class="ion-text-center">${msgTopic}${msgIcon}${msgBottom}</div>`;
-
-    const alert = await this.alertController.create({
-      mode: "md",
-      message: alertMsg,
-      buttons: [
-        {
-          text: "ปิด",
-          role: "confirm",
-          id: "confirm-button",
-          handler: () => {
-            this.memory.isWaiting = false;
-            this.ionViewDidEnter()
-          }
-        }
-      ]
-    });
-
-    await alert.present();
-  }
-
 
 }

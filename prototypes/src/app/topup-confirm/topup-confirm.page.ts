@@ -47,6 +47,9 @@ export class TopupConfirmPage implements OnInit {
           id: "confirm-button",
           handler: () => {
             this.memory.isTopUp = true;
+            this.memory.isWaiting = true;
+            console.log(this.memory.isWaiting);
+            
             this.router.navigate(['/condition-topup']);
           }
         }

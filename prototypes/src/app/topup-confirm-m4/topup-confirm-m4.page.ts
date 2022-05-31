@@ -37,7 +37,6 @@ export class TopupConfirmM4Page implements OnInit {
           handler: () => {
             this.memory.isTopUp = true;
             console.log(this.memory.isTopUp );
-            
             this.router.navigate(['/cart-checkout-m4']);
           }
         }

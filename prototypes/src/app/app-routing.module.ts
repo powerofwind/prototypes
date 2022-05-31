@@ -194,6 +194,10 @@ const routes: Routes = [
     path: 'eslip-detail-m4',
     loadChildren: () => import('./eslip-detail-m4/eslip-detail-m4.module').then( m => m.EslipDetailM4PageModule)
   },
+  {
+    path: 'condition-topup-m3',
+    loadChildren: () => import('./condition-topup-m3/condition-topup-m3.module').then( m => m.ConditionTopupM3PageModule)
+  },
 
 
 

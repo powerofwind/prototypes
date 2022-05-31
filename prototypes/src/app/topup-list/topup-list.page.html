@@ -8,7 +8,7 @@
 <ion-content mode="ios">
 
   <ng-container>
-    <ion-item color="tertiary" lines="none" class="qrStyle ion-padding-vertical" routerLink="/topup-confirm">
+    <ion-item color="tertiary" lines="none" class="qrStyle ion-padding-vertical" (click)="gotoNextPage()">
       <ion-avatar slot="start" class="avatar-m non-circle">
         <img class="non-circle" src="assets/imgs/topqr.png" />
       </ion-avatar>
@@ -21,7 +21,7 @@
       <ion-list-header lines="none" mode="md">
         <ion-label>เลือกบัญชีที่ผูกไว้</ion-label>
       </ion-list-header>
-      <ion-item button detail="false" class="ion-margin-bottom" color="tertiary" routerLink="/topup-confirm">
+      <ion-item button detail="false" class="ion-margin-bottom" color="tertiary" (click)="gotoNextPage()">
         <ion-avatar slot="start" class="avatar-s non-circle">
           <img src="assets/imgs/PromtPay.png" />
         </ion-avatar>
@@ -30,7 +30,7 @@
           <h4>******7715</h4>
         </ion-label>
       </ion-item>
-      <ion-item button detail="false" class="ion-margin-bottom" color="tertiary" routerLink="/topup-confirm">
+      <ion-item button detail="false" class="ion-margin-bottom" color="tertiary" (click)="gotoNextPage()">
         <ion-avatar slot="start" class="avatar-s non-circle">
           <img src="assets/imgs/kbank.png" />
         </ion-avatar>
