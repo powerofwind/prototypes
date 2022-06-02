@@ -11,6 +11,7 @@ export class ConditionM2Page implements OnInit {
 
   public isAgree: boolean = false
   public isPay: boolean = false
+  public isCom: boolean = false
   public text: string;
 
   private progressBarTimer: NodeJS.Timer;
@@ -112,5 +113,9 @@ export class ConditionM2Page implements OnInit {
     this.isShowNextStepTimer = isShowTimer;
     this.nextStepProgressBar = 0;
     this.displayNextStepTime = this.nexStepTime;
+  }
+
+  openDlg(){
+    this.isCom = true;
   }
 }

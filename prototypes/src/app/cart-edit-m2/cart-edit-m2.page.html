@@ -29,38 +29,24 @@
 
     <ion-card color="tertiary">
       <ion-card-content class="ion-no-padding">
-        <ion-item class="ion-no-padding" color="tertiary" lines="none">
+        <ion-item class="ion-no-padding" color="tertiary" lines="full">
           <ion-grid class="ion-padding">
             <ion-row>
               <ion-col class="ion-no-padding">
                 <ion-label>
-                  <h3 class="line-height2"><b>รายละเอียดการจ่ายเงิน</b></h3>
+                  <h3 class="line-height2"><b>รายละเอียดธุรกรรม</b></h3>
                 </ion-label>
               </ion-col>
             </ion-row>
             <ion-row>
               <ion-col class="ion-no-padding">
                 <ion-label color="medium">
-                  <h3 class="line-height2">รวมค่าสินค้า</h3>
+                  <h3 class="line-height2">จำนวนเงิน</h3>
                 </ion-label>
               </ion-col>
               <ion-col class="ion-no-padding ion-text-right">
                 <ion-label color="medium">
                   <h3>299.00
-                    <small>THB</small>
-                  </h3>
-                </ion-label>
-              </ion-col>
-            </ion-row>
-            <ion-row>
-              <ion-col class="ion-no-padding">
-                <ion-label color="medium">
-                  <h3 class="line-height2">ค่าจัดส่ง</h3>
-                </ion-label>
-              </ion-col>
-              <ion-col class="ion-no-padding ion-text-right">
-                <ion-label color="medium">
-                  <h3>0.00
                     <small>THB</small>
                   </h3>
                 </ion-label>
@@ -83,7 +69,7 @@
             <ion-row>
               <ion-col class="ion-no-padding">
                 <ion-label color="medium">
-                  <h3 class="line-height2">ราคารวมทั้งหมด</h3>
+                  <h3 class="line-height2">รวมทั้งหมด</h3>
                 </ion-label>
               </ion-col>
               <ion-col class="ion-no-padding ion-text-right">
@@ -101,10 +87,28 @@
           </ion-grid>
         </ion-item>
 
+        <ion-item color="tertiary" lines="full">
+          <img slot="start" width="22" height="22" class="qr" src="assets/imgs/walletgray.png" />
+          <ion-col class="ion-no-padding">
+            <ion-label color="medium">
+              <h3 class="line-height2">
+                <!-- กระเป๋าของฉัน</h3> -->
+                Mana_WalletX</h3>
+            </ion-label>
+          </ion-col>
+          <ion-col class="ion-no-padding ion-text-right">
+            <ion-label color="medium">
+              <h3><B>(100.00 <small>THB</small>)</B>
+                เปลี่ยน
+              </h3>
+            </ion-label>
+          </ion-col>
+        </ion-item>
+
         <ion-item color="tertiary" class="ion-no-padding">
           <ion-label class="ion-padding-start" color="medium">
             <h3>
-              ใส่คูปองหรือแต้ม
+              คูปอง
             </h3>
           </ion-label>
           <ion-fab horizontal="end">
@@ -239,7 +243,7 @@
               <ion-col class="ion-no-padding ion-text-right">
                 <ion-label color="medium">
                   <h3>
-                    <!-- <span>ลบ</span> -->
+                    <span>แก้ไข&nbsp;ลบ</span>
                   </h3>
                 </ion-label>
               </ion-col>
@@ -254,5 +258,5 @@
 
 </ion-content>
 <ion-footer>
-  <ion-button color="danger" class="ion-no-margin" expand="full" routerLink="/cart-checkout-m2">สั่งสินค้า</ion-button>
+  <ion-button color="danger" class="ion-no-margin" expand="full" routerLink="/cart-checkout-m4">สั่งสินค้า</ion-button>
 </ion-footer>

@@ -28,22 +28,90 @@
         <div *ngIf="isAgree == undefined">
           <ion-label color="medium">ผู้ใช้งานยินยอมเป็นสมาชิกของร้านเดี๋ยวก็ละลายเท่านั้น จึงจะได้รับส่วนลดในการชำระเงิน
           </ion-label>
-          <p class="ion-no-margin">
+          <!-- <p class="ion-no-margin">
             <ion-text color="medium">สถานะ: รอดำเนินการ</ion-text>
-          </p>
+          </p> -->
         </div>
 
         <div *ngIf="isAgree">
           <ion-label color="primary">ผู้ใช้งานยินยอมเป็นสมาชิกของร้านเดี๋ยวก็ละลายเท่านั้น
             จึงจะได้รับส่วนลดในการชำระเงิน
           </ion-label>
-          <p class="ion-no-margin">
+          <!-- <p class="ion-no-margin">
             <ion-text color="primary">สถานะ: ดำเนินการเรียบร้อย</ion-text>
-          </p>
+          </p> -->
         </div>
       </ion-card>
       <hr class="ion-no-margin">
     </ng-container>
+
+       <!-- KYC -->
+       <ng-container>
+        <ion-item color="tertiary" *ngIf="isPay == undefined || isPay == false" >
+          <ion-icon name="alert-circle-outline" color="medium"></ion-icon>
+          <ion-label class="ion-padding-start" color="medium"><b>ข้อมูลยืนยันตัวตน</b>
+          </ion-label>
+        </ion-item>
+  
+        <ion-item color="tertiary" *ngIf="isPay == true">
+          <ion-icon name="checkmark-circle-outline" color="primary"></ion-icon>
+          <ion-label class="ion-padding-start" color="primary"><b>ข้อมูลยืนยันตัวตน</b>
+          </ion-label>
+        </ion-item>
+  
+        <ion-card color="tertiary" class="ion-padding-end ion-padding-bottom ion-card-description">
+          <div *ngIf="isPay == undefined || isPay == false">
+            <ion-label color="medium">ผู้ใช้งานต้องผ่านการยืนยันตัวตน (KYC) เพื่อความปลอดภัยในการใช้บริการชำระเงิน
+            </ion-label>
+            <!-- <p class="ion-no-margin">
+              <ion-text color="medium">สถานะ: รอยืนยันการชำระเงินค่าสมาชิก</ion-text>
+            </p> -->
+          </div>
+  
+          <div *ngIf="isPay == true">
+            <ion-label color="primary">ผู้ใช้งานต้องผ่านการยืนยันตัวตน (KYC) เพื่อความปลอดภัยในการใช้บริการชำระเงิน
+            </ion-label>
+            <!-- <p class="ion-no-margin">
+              <ion-text color="primary">สถานะ: จ่ายเงินค่าสมัครสมาชิกเรียบร้อย</ion-text>
+            </p> -->
+          </div>
+        </ion-card>
+        <hr class="ion-no-margin">
+      </ng-container>
+  
+       <!-- เพิ่มบัญชี -->
+       <ng-container>
+        <ion-item color="tertiary" *ngIf="isPay == undefined || isPay == false" >
+          <ion-icon name="alert-circle-outline" color="medium"></ion-icon>
+          <ion-label class="ion-padding-start" color="medium"><b>เพิ่มบัญชีของฉัน</b>
+          </ion-label>
+        </ion-item>
+  
+        <ion-item color="tertiary" *ngIf="isPay == true">
+          <ion-icon name="checkmark-circle-outline" color="primary"></ion-icon>
+          <ion-label class="ion-padding-start" color="primary"><b>เพิ่มบัญชีของฉัน</b>
+          </ion-label>
+        </ion-item>
+  
+        <ion-card color="tertiary" class="ion-padding-end ion-padding-bottom ion-card-description">
+          <div *ngIf="isPay == undefined || isPay == false">
+            <ion-label color="medium">ผู้ใช้งานต้องผ่านการยืนยันตัวตน (KYC) เพื่อความปลอดภัยในการใช้บริการชำระเงิน
+            </ion-label>
+            <!-- <p class="ion-no-margin">
+              <ion-text color="medium">สถานะ: รอยืนยันการชำระเงินค่าสมาชิก</ion-text>
+            </p> -->
+          </div>
+  
+          <div *ngIf="isPay == true">
+            <ion-label color="primary">ผู้ใช้งานต้องผ่านการยืนยันตัวตน (KYC) เพื่อความปลอดภัยในการใช้บริการชำระเงิน
+            </ion-label>
+            <!-- <p class="ion-no-margin">
+              <ion-text color="primary">สถานะ: จ่ายเงินค่าสมัครสมาชิกเรียบร้อย</ion-text>
+            </p> -->
+          </div>
+        </ion-card>
+        <hr class="ion-no-margin">
+      </ng-container>
 
 
     <!-- จ่ายเงิน -->
@@ -64,18 +132,18 @@
         <div *ngIf="isPay == undefined || isPay == false">
           <ion-label color="medium">ผู้ใช้งานยินยอมเป็นสมาชิกของร้านเดี๋ยวก็ละลายเท่านั้น จึงจะได้รับส่วนลดในการชำระเงิน
           </ion-label>
-          <p class="ion-no-margin">
+          <!-- <p class="ion-no-margin">
             <ion-text color="medium">สถานะ: รอยืนยันการชำระเงินค่าสมาชิก</ion-text>
-          </p>
+          </p> -->
         </div>
 
         <div *ngIf="isPay == true">
           <ion-label color="primary">ผู้ใช้งานยินยอมเป็นสมาชิกของร้านเดี๋ยวก็ละลายเท่านั้น
             จึงจะได้รับส่วนลดในการชำระเงิน
           </ion-label>
-          <p class="ion-no-margin">
+          <!-- <p class="ion-no-margin">
             <ion-text color="primary">สถานะ: จ่ายเงินค่าสมัครสมาชิกเรียบร้อย</ion-text>
-          </p>
+          </p> -->
         </div>
       </ion-card>
       <hr class="ion-no-margin">

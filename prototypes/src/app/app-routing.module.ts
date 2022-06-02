@@ -186,7 +186,8 @@ const routes: Routes = [
   {
     path: 'cart-dialog-m4',
     loadChildren: () => import('./cart-dialog-m4/cart-dialog-m4.module').then( m => m.CartDialogM4PageModule)
-  },  {
+  },
+  {
     path: 'condition-m4',
     loadChildren: () => import('./condition-m4/condition-m4.module').then( m => m.ConditionM4PageModule)
   },

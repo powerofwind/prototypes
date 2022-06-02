@@ -20,7 +20,7 @@ export class CartDialogM4Page implements OnInit {
   }
 
   isPaying(){
-    this.memory.isPayM3 = true;
+    this.memory.isPayM2 = true;
     this.router.navigate(['/condition-m4']);
 
     // if (this.isHomeM2) {
