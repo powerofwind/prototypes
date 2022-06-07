@@ -95,6 +95,15 @@
 
           <ion-list-header mode="md" color="tertiary">
             <ion-label>
+              <h3><b>ค่าสมัครสมาชิก</b></h3>
+            </ion-label>
+          </ion-list-header>
+          <ion-item color="tertiary" lines="none">
+            <ion-label class="ion-text-center"><h3><b>299 THB/ ปี</b></h3></ion-label>
+          </ion-item>
+
+          <ion-list-header mode="md" color="tertiary">
+            <ion-label>
               <h3><b>Consent Management</b>
                 <ion-text color="danger" *ngIf="isInvalid('isAceeptAgreement')">
                   คุณยังไม่ยอมรับข้อตกลง
@@ -106,17 +115,17 @@
         <ion-item color="tertiary" lines="none">
           <ion-checkbox [disabled]="true" class="checkbox-checked" mode="ios" color="danger" slot="start" formControlName="isSubscribe">
           </ion-checkbox>
-          <ion-label>สมัครสมาชิก (*สมาชิกมีอายุ 1 ปีนับจากวันที่ชำระเงินเรียบร้อยแล้ว)</ion-label>
+          <ion-label><h3><b>สมัครสมาชิก (*สมาชิกมีอายุ 1 ปีนับจากวันที่ชำระเงินเรียบร้อยแล้ว)</b></h3></ion-label>
         </ion-item>
         <ion-item color="tertiary" lines="none">
           <ion-checkbox class="checkbox-checked" mode="ios" color="danger" slot="start" formControlName="isAddShortcut">
           </ion-checkbox>
-          <ion-label>แจ้งเตือนการต่ออายุสมาชิกล่วงหน้า 1 เดือนก่อนวันหมดอายุที่หน้า Home</ion-label>
+          <ion-label><h3><b>แจ้งเตือนการต่ออายุสมาชิกล่วงหน้า 1 เดือนก่อนวันหมดอายุที่หน้า Home</b></h3></ion-label>
         </ion-item>
         <ion-item color="tertiary" lines="none">
           <ion-checkbox  mode="ios" color="danger" slot="start" formControlName="isAceeptAgreement">
           </ion-checkbox>
-          <ion-label>ฉันได้อ่านและยอมรับข้อตกลงแล้ว</ion-label>
+          <ion-label><h3><b>ฉันได้อ่านและยอมรับข้อตกลงแล้ว</b></h3></ion-label>
         </ion-item>
       </ion-card>
 
