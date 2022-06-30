@@ -124,14 +124,6 @@ const routes: Routes = [
     loadChildren: () => import('./cart-edit-m2/cart-edit-m2.module').then( m => m.CartEditM2PageModule)
   },
   {
-    path: 'cart-checkout-m2',
-    loadChildren: () => import('./cart-checkout-m2/cart-checkout-m2.module').then( m => m.CartCheckoutM2PageModule)
-  },
-  {
-    path: 'cart-dialog-m2',
-    loadChildren: () => import('./cart-dialog-m2/cart-dialog-m2.module').then( m => m.CartDialogM2PageModule)
-  },
-  {
     path: 'eslip-home-m2',
     loadChildren: () => import('./eslip-home-m2/eslip-home-m2.module').then( m => m.EslipHomeM2PageModule)
   },
@@ -148,33 +140,13 @@ const routes: Routes = [
     loadChildren: () => import('./topup-confirm/topup-confirm.module').then( m => m.TopupConfirmPageModule)
   },
   {
-    path: 'condition-m3',
-    loadChildren: () => import('./condition-m3/condition-m3.module').then( m => m.ConditionM3PageModule)
-  },
-  {
     path: 'condition-topup',
     loadChildren: () => import('./condition-topup/condition-topup.module').then( m => m.ConditionTopupPageModule)
-  },
-  {
-    path: 'cart-edit-m3',
-    loadChildren: () => import('./cart-edit-m3/cart-edit-m3.module').then( m => m.CartEditM3PageModule)
-  },
-  {
-    path: 'cart-checkout-m3',
-    loadChildren: () => import('./cart-checkout-m3/cart-checkout-m3.module').then( m => m.CartCheckoutM3PageModule)
-  },
-  {
-    path: 'cart-dialog-m3',
-    loadChildren: () => import('./cart-dialog-m3/cart-dialog-m3.module').then( m => m.CartDialogM3PageModule)
   },
   {
     path: 'cart-checkout-m4',
     loadChildren: () => import('./cart-checkout-m4/cart-checkout-m4.module').then( m => m.CartCheckoutM4PageModule)
   },
-  // {
-  //   path: 'cart-checkout-m4',
-  //   loadChildren: () => import('./cart-checkout-m4/cart-checkout-m4.module').then( m => m.CartCheckoutM5PageModule)
-  // },
   {
     path: 'topup-list-m4',
     loadChildren: () => import('./topup-list-m4/topup-list-m4.module').then( m => m.TopupListM4PageModule)
@@ -190,10 +162,6 @@ const routes: Routes = [
   {
     path: 'condition-m4',
     loadChildren: () => import('./condition-m4/condition-m4.module').then( m => m.ConditionM4PageModule)
-  },
-  {
-    path: 'eslip-detail-m4',
-    loadChildren: () => import('./eslip-detail-m4/eslip-detail-m4.module').then( m => m.EslipDetailM4PageModule)
   },
   {
     path: 'condition-topup-m3',
