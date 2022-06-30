@@ -166,7 +166,35 @@ const routes: Routes = [
   {
     path: 'condition-topup-m3',
     loadChildren: () => import('./condition-topup-m3/condition-topup-m3.module').then( m => m.ConditionTopupM3PageModule)
+  },  {
+    path: 'fiat-main',
+    loadChildren: () => import('./fiat-main/fiat-main.module').then( m => m.FiatMainPageModule)
   },
+  {
+    path: 'fiat-detail',
+    loadChildren: () => import('./fiat-detail/fiat-detail.module').then( m => m.FiatDetailPageModule)
+  },
+  {
+    path: 'fiat-create',
+    loadChildren: () => import('./fiat-create/fiat-create.module').then( m => m.FiatCreatePageModule)
+  },
+  {
+    path: 'fiat-create-confirm',
+    loadChildren: () => import('./fiat-create-confirm/fiat-create-confirm.module').then( m => m.FiatCreateConfirmPageModule)
+  },
+  {
+    path: 'fiat-topup',
+    loadChildren: () => import('./fiat-topup/fiat-topup.module').then( m => m.FiatTopupPageModule)
+  },
+  {
+    path: 'fiat-withdraw',
+    loadChildren: () => import('./fiat-withdraw/fiat-withdraw.module').then( m => m.FiatWithdrawPageModule)
+  },
+  {
+    path: 'option-dialog-currency',
+    loadChildren: () => import('./option-dialog-currency/option-dialog-currency.module').then( m => m.OptionDialogCurrencyPageModule)
+  },
+
 
 
 

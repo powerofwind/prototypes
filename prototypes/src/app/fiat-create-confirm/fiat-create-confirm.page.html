@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>ยืนยันการสร้างกระเป๋าเงิน Fiat</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list color="tertiary" lines="none" class="ion-text-center">
+    <ion-card class="ion-text-center" color="tertiary">
+      <ion-card-content class="ion-no-padding ion-padding-vertical">
+
+        <ion-avatar class="center ion-margin-vertical avatar-l">
+          <img src="data.logo ? data.logo :'assets/imgs/defaultshop.png'"/>
+        </ion-avatar>
+          <ion-label><b>กระเป๋าเงิน Fiat</b>
+          </ion-label>
+
+        <ion-item color="tertiary">
+          <ion-label>ชื่อเรียกกระเป๋า
+            <ion-text>
+              <h2><b>กระเป๋า USD</b></h2>
+            </ion-text>
+          </ion-label>
+        </ion-item>
+        
+        <ion-item  color="tertiary">
+          <ion-label>สกุลเงิน
+            <ion-text>
+              <h2><b>USD</b></h2>
+            </ion-text>
+          </ion-label>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-button color="danger" class="ion-no-margin" expand="full" (click)="goto()">ตกลง</ion-button>
+</ion-footer>

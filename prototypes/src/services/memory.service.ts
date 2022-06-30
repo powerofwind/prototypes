@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class MemoryService {
 
+  //membership-coupon
   public data: any;
   public isAgree: boolean;
   public isPay: boolean;
@@ -14,6 +15,11 @@ export class MemoryService {
   public isHomeM2: boolean;
   public isTopUp: boolean;
   public isWaiting: boolean;
+
+
+  //Fiat-wallet
+  public isCreateWallet: any;
+
 
   constructor() { }
 }
