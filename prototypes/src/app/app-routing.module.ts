@@ -194,6 +194,30 @@ const routes: Routes = [
     path: 'option-dialog-currency',
     loadChildren: () => import('./option-dialog-currency/option-dialog-currency.module').then( m => m.OptionDialogCurrencyPageModule)
   },
+  {
+    path: 'fiat-topup-exchange',
+    loadChildren: () => import('./fiat-topup-exchange/fiat-topup-exchange.module').then( m => m.FiatTopupExchangePageModule)
+  },
+  {
+    path: 'fiat-withdraw-exchange',
+    loadChildren: () => import('./fiat-withdraw-exchange/fiat-withdraw-exchange.module').then( m => m.FiatWithdrawExchangePageModule)
+  },
+  {
+    path: 'fiat-topup-fiat',
+    loadChildren: () => import('./fiat-topup-fiat/fiat-topup-fiat.module').then( m => m.FiatTopupFiatPageModule)
+  },
+  {
+    path: 'fiat-topup-crypto',
+    loadChildren: () => import('./fiat-topup-crypto/fiat-topup-crypto.module').then( m => m.FiatTopupCryptoPageModule)
+  },
+  {
+    path: 'fiat-topup-qr',
+    loadChildren: () => import('./fiat-topup-qr/fiat-topup-qr.module').then( m => m.FiatTopupQrPageModule)
+  },
+  {
+    path: 'fiat-topup-mana',
+    loadChildren: () => import('./fiat-topup-mana/fiat-topup-mana.module').then( m => m.FiatTopupManaPageModule)
+  },
 
 
 
