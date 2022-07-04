@@ -250,6 +250,18 @@ const routes: Routes = [
     path: 'fiat-topup-mana-confirm',
     loadChildren: () => import('./fiat-topup-mana-confirm/fiat-topup-mana-confirm.module').then( m => m.FiatTopupManaConfirmPageModule)
   },
+  {
+    path: 'fiat-topup-qr-create-success',
+    loadChildren: () => import('./fiat-topup-qr-create-success/fiat-topup-qr-create-success.module').then( m => m.FiatTopupQrCreateSuccessPageModule)
+  },
+  {
+    path: 'fiat-withdraw-mana-create',
+    loadChildren: () => import('./fiat-withdraw-mana-create/fiat-withdraw-mana-create.module').then( m => m.FiatWithdrawManaCreatePageModule)
+  },
+  {
+    path: 'fiat-withdraw-mana-confirm',
+    loadChildren: () => import('./fiat-withdraw-mana-confirm/fiat-withdraw-mana-confirm.module').then( m => m.FiatWithdrawManaConfirmPageModule)
+  },
 
 
 

@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>รายละเอียดการเติมเงิน</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="tertiary" color="tertiary">
+
+    <ion-card color="tertiary">
+      <br>
+      <ion-card-content class="ion-text-center ion-text-wrap">
+        <ion-label class="ion-text-center">
+          <h2><b>สแกน QR นี้เพื่อเติมเงิน</b></h2>
+        </ion-label>
+        <img src="assets/imgs/qrcode.png">
+        <ion-label color="medium" class="ion-text-center">
+          <h2>QR เติมเงินเข้า mana</h2>
+        </ion-label>
+
+      </ion-card-content>
+      <ion-item color="tertiary" lines="full">
+        <img slot="start" width="22" height="22" class="qr" src="assets/imgs/walletgray.png" />
+        <ion-col class="ion-no-padding">
+          <ion-label color="medium">
+            <h3 class="line-height2">กระเป๋าที่เติมเข้า</h3>
+          </ion-label>
+        </ion-col>
+        <ion-col class="ion-no-padding ion-text-right">
+          <ion-label>
+            <h3>
+              <b>กระเป๋า <small>USD </small></b>
+            </h3>
+          </ion-label>
+        </ion-col>
+      </ion-item>
+      <ion-item color="tertiary" lines="full">
+        <img slot="start" width="22" height="22" class="qr" src="assets/imgs/walletgray.png" />
+        <ion-col class="ion-no-padding">
+          <ion-label color="medium">
+            <h3 class="line-height2">จำนวนเงินที่เติม</h3>
+          </ion-label>
+        </ion-col>
+        <ion-col class="ion-no-padding ion-text-right">
+          <ion-label color="danger">
+            <h3>
+              <b>1005.00 <small>THB </small></b>
+            </h3>
+          </ion-label>
+        </ion-col>
+      </ion-item>
+      <br>
+
+      <ion-item class="ion-text-center" color="tertiary" lines="none">
+        <ion-grid class="ion-padding">
+          <ion-row class="ion-text-center ion-align-items-center">
+            <ion-col size="5" class="ion-text-center ion-no-padding">
+              <ion-label class="ion-text-right">
+                <h3>บันทึกรูป</h3>
+              </ion-label>
+            </ion-col>
+            <ion-col size="2">
+            </ion-col>
+            <ion-col size="5" class="ion-text-center ion-no-padding">
+              <ion-label class="ion-text-left">
+                <h3>แชร์</h3>
+              </ion-label>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+    </ion-card>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-button color="danger" class="ion-no-margin" expand="full" type="submit">ปิด
+  </ion-button>
+</ion-footer>
