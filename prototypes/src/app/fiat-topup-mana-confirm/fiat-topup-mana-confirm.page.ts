@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 
 @Component({
@@ -9,7 +10,7 @@ import { AlertController } from '@ionic/angular';
 export class FiatTopupManaConfirmPage implements OnInit {
 
 
-  constructor(private alertController: AlertController) { }
+  constructor(private alertController: AlertController,private router: Router) { }
 
   ngOnInit() {
   }
@@ -36,14 +37,14 @@ export class FiatTopupManaConfirmPage implements OnInit {
           role: "cancel",
           id: "cancel-button",
           handler: () => {
-            // Do something when click cancel button
+            this.router.navigate(['/fiat-topup']);
           }
         }, {
           text: "ตกลง",
           role: "confirm",
           id: "confirm-button",
           handler: () => {
-          // Do something when click cancel button
+            this.router.navigate(['/fiat-topup']);
           }
         }
       ]

@@ -47,7 +47,7 @@
 
   <ion-item lines="none" button detail="false" color="tertiary" class="ion-margin-bottom" class="ion-padding-vertical">
     <ion-avatar slot="start">
-      <img src="assets/imgs/walletgray.png">
+      <img src="assets/imgs/txwithdraw.png" height="30px" width="30px">
     </ion-avatar>
     <ion-label>
       <h2>จำนวนที่ต้องการถอน</h2>
@@ -61,6 +61,6 @@
 </ion-content>
 
 <ion-footer class="ion-no-border">
-  <ion-button color="danger" class="ion-no-margin" expand="full" type="submit">ยืนยัน
+  <ion-button color="danger" class="ion-no-margin" expand="full" (click)="onSave()">ยืนยัน
   </ion-button>
 </ion-footer>
