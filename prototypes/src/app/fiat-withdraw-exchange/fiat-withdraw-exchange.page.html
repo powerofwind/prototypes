@@ -34,20 +34,43 @@
           <h2><b>ไปยัง</b></h2>
         </ion-label>
       </ion-item>
-      <ion-item color="tertiary" lines="full">
+      <ion-item *ngIf="type == 'mana'" color="tertiary" lines="full">
         <img slot="start" width="22" height="22" class="qr" src="assets/imgs/walletgray.png" />
         <ion-col class="ion-no-padding">
           <ion-label>
-            <h2><b>Raybag USD</b></h2>
+            <h2><b>พร้อมเพย์_พร้อมเปย์</b></h2>
+          </ion-label>
+        </ion-col>
+      </ion-item>
+      <ion-item *ngIf="type == 'crypto'" color="tertiary" lines="full" >
+        <img slot="start" width="22" height="22" class="qr" src="assets/imgs/walletgray.png" />
+        <ion-col class="ion-no-padding">
+          <ion-label>
+            <h2><b>Crypto_Ethereum</b></h2>
           </ion-label>
         </ion-col>
         <ion-col class="ion-no-padding ion-text-right">
           <ion-label color="medium">
-            <h3><B>100K <small>THB </small></B></h3>
+            <h3><B>0.8500021 <small> ETH</small></B></h3>
+          </ion-label>
+        </ion-col>
+      </ion-item>
+      <ion-item *ngIf="type == 'fiat'" color="tertiary" lines="full" >
+        <img slot="start" width="22" height="22" class="qr" src="assets/imgs/walletgray.png" />
+        <ion-col class="ion-no-padding">
+          <ion-label>
+            <h2><b>จ่ายทั่วไป</b></h2>
+          </ion-label>
+        </ion-col>
+        <ion-col class="ion-no-padding ion-text-right">
+          <ion-label color="medium">
+            <h3><B>1.2K <small>THB </small></B></h3>
           </ion-label>
         </ion-col>
       </ion-item>
 
+
+      <div *ngIf="type != 'crypto'">
       <ion-item color="tertiary" lines="none">
         <ion-label>
           <h2>สกุลเงินต้นทาง</h2>
@@ -82,6 +105,45 @@
           <h3>1(100 USD) ~ 35.15 THB</h3>
         </ion-label>
       </ion-item>
+      </div>
+
+      <div *ngIf="type == 'crypto'">
+        <ion-item color="tertiary" lines="none">
+          <ion-label>
+            <h2>สกุลเงินต้นทาง</h2>
+          </ion-label>
+        </ion-item>
+        <ion-item color="tertiary" lines="full">
+          <ion-label color="danger" class="ion-text-center">
+            <h2><b>20.50 <small>USD </small></b></h2>
+          </ion-label>
+        </ion-item>
+  
+        <ion-item color="tertiary" lines="none">
+          <ion-col class="ion-no-padding">
+            <ion-label>
+              <h2>สกุลเงินปลายทาง</h2>
+            </ion-label>
+          </ion-col>
+          <ion-col class="ion-no-padding ion-text-right">
+            <ion-label color="medium">
+              <h3>+ ค่าธรรมเนียม 0.5 USD</h3>
+            </ion-label>
+          </ion-col>
+        </ion-item>
+        <ion-item color="tertiary" lines="full">
+          <ion-label color="danger" class="ion-text-center">
+            <h2><b>0.0186 <small>ETH </small></b></h2>
+          </ion-label>
+        </ion-item>
+  
+        <ion-item color="tertiary" lines="none">
+          <ion-label color="medium" class="ion-text-center">
+            <h3>1 USD ~ 0.00093 ETH</h3>
+          </ion-label>
+        </ion-item>
+        </div>
+      
     </ion-list>
 
     <ion-list class="ion-margin-top" lines="full">
@@ -91,11 +153,25 @@
         </ion-label>
       </ion-item>
       <ion-item color="tertiary" lines="full">
-        <ion-label>
+        <ion-label  *ngIf="type =='fiat'">
           <h2><b>Ref.</b> &nbsp;<ion-text color="medium">2345678901</ion-text>
           </h2>
         </ion-label>
+
+        <ion-label  *ngIf="type =='mana'" for="customInputAmount" class="ion-padding-bottom">
+          <h2><b>หมายเลขพร้อมเพย์</b> : 092236478</h2>
+        </ion-label>
+
+        <ion-label *ngIf="type =='crypto'" for="customInputAmount" class="ion-padding-bottom">
+          <div>
+            <h2><b>Address</b> &nbsp; <ion-text color="medium">Oxf7890105ce5637789FF355C6ea</ion-text>
+            </h2>
+            <h2><b>Network</b>  &nbsp; <ion-text color="medium">Mainchain</ion-text>
+            </h2>
+          </div>
+        </ion-label>
       </ion-item>
+      
       <ion-item color="tertiary" lines="none">
         <ion-label>
           <h2><b>หมายเหตุ</b></h2>
@@ -108,6 +184,6 @@
 </ion-content>
 
 <ion-footer class="ion-no-border">
-  <ion-button color="danger" class="ion-no-margin" expand="full">ตกลง
+  <ion-button color="danger" class="ion-no-margin" expand="full" (click)="goto()">ตกลง
   </ion-button>
 </ion-footer>
