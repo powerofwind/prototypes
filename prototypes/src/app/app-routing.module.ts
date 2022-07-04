@@ -166,7 +166,8 @@ const routes: Routes = [
   {
     path: 'condition-topup-m3',
     loadChildren: () => import('./condition-topup-m3/condition-topup-m3.module').then( m => m.ConditionTopupM3PageModule)
-  },  {
+  },
+  {
     path: 'fiat-main',
     loadChildren: () => import('./fiat-main/fiat-main.module').then( m => m.FiatMainPageModule)
   },
@@ -218,6 +219,39 @@ const routes: Routes = [
     path: 'fiat-topup-mana',
     loadChildren: () => import('./fiat-topup-mana/fiat-topup-mana.module').then( m => m.FiatTopupManaPageModule)
   },
+  {
+    path: 'fiat-withdraw-fiat',
+    loadChildren: () => import('./fiat-withdraw-fiat/fiat-withdraw-fiat.module').then( m => m.FiatWithdrawFiatPageModule)
+  },
+  {
+    path: 'fiat-withdraw-crypto',
+    loadChildren: () => import('./fiat-withdraw-crypto/fiat-withdraw-crypto.module').then( m => m.FiatWithdrawCryptoPageModule)
+  },
+  {
+    path: 'fiat-withdraw-mana',
+    loadChildren: () => import('./fiat-withdraw-mana/fiat-withdraw-mana.module').then( m => m.FiatWithdrawManaPageModule)
+  },
+  {
+    path: 'fiat-topup-fiat-create',
+    loadChildren: () => import('./fiat-topup-fiat-create/fiat-topup-fiat-create.module').then( m => m.FiatTopupFiatCreatePageModule)
+  },
+  {
+    path: 'fiat-topup-exchange-confirm',
+    loadChildren: () => import('./fiat-topup-exchange-confirm/fiat-topup-exchange-confirm.module').then( m => m.FiatTopupExchangeConfirmPageModule)
+  },  {
+    path: 'fiat-topup-qr-confirm',
+    loadChildren: () => import('./fiat-topup-qr-confirm/fiat-topup-qr-confirm.module').then( m => m.FiatTopupQrConfirmPageModule)
+  },
+  {
+    path: 'fiat-topup-mana-create',
+    loadChildren: () => import('./fiat-topup-mana-create/fiat-topup-mana-create.module').then( m => m.FiatTopupManaCreatePageModule)
+  },
+  {
+    path: 'fiat-topup-mana-confirm',
+    loadChildren: () => import('./fiat-topup-mana-confirm/fiat-topup-mana-confirm.module').then( m => m.FiatTopupManaConfirmPageModule)
+  },
+
+
 
 
 
