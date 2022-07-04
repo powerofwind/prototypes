@@ -46,9 +46,9 @@
   </ion-card>
 
   <ion-item lines="none" button detail="false" color="tertiary" class="ion-margin-bottom" class="ion-padding-vertical">
-    <ion-avatar slot="start">
-      <img src="assets/imgs/walletgray.png">
-    </ion-avatar>
+    <div slot="start">
+      <img src="assets/imgs/walletgray.png" height="30px" width="30px">
+    </div>
     <ion-label>
       <h2>จำนวนที่ต้องการเติม</h2>
       <ion-text color="danger">
@@ -61,6 +61,5 @@
 </ion-content>
 
 <ion-footer class="ion-no-border">
-  <ion-button color="danger" class="ion-no-margin" expand="full" type="submit">ยืนยัน
-  </ion-button>
+  <ion-button color="danger" class="ion-no-margin" expand="full" (click)="onSave()">ยืนยัน</ion-button>
 </ion-footer>
