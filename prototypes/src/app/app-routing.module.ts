@@ -254,7 +254,8 @@ const routes: Routes = [
   {
     path: 'fiat-topup-mana-confirm',
     loadChildren: () => import('./fiat-topup-mana-confirm/fiat-topup-mana-confirm.module').then( m => m.FiatTopupManaConfirmPageModule)
-  },  {
+  },
+  {
     path: 'fiat-topup-fiat-create-success',
     loadChildren: () => import('./fiat-topup-fiat-create-success/fiat-topup-fiat-create-success.module').then( m => m.FiatTopupFiatCreateSuccessPageModule)
   },
@@ -270,6 +271,22 @@ const routes: Routes = [
     path: 'fiat-withdraw-mana-confirm',
     loadChildren: () => import('./fiat-withdraw-mana-confirm/fiat-withdraw-mana-confirm.module').then( m => m.FiatWithdrawManaConfirmPageModule)
   },
+  {
+    path: 'fiat-withdraw-fiat-create',
+    loadChildren: () => import('./fiat-withdraw-fiat-create/fiat-withdraw-fiat-create.module').then( m => m.FiatWithdrawFiatCreatePageModule)
+  },
+  {
+    path: 'fiat-withdraw-fiat-create/:type',
+    loadChildren: () => import('./fiat-withdraw-fiat-create/fiat-withdraw-fiat-create.module').then( m => m.FiatWithdrawFiatCreatePageModule)
+  },  {
+    path: 'fiat-withdraw-exchange-confirm',
+    loadChildren: () => import('./fiat-withdraw-exchange-confirm/fiat-withdraw-exchange-confirm.module').then( m => m.FiatWithdrawExchangeConfirmPageModule)
+  },
+  {
+    path: 'fiat-withdraw-fiat-create-success',
+    loadChildren: () => import('./fiat-withdraw-fiat-create-success/fiat-withdraw-fiat-create-success.module').then( m => m.FiatWithdrawFiatCreateSuccessPageModule)
+  },
+
 
 
 

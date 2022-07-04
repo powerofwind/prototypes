@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationExtras, Router } from '@angular/router';
 
 @Component({
   selector: 'app-fiat-withdraw-mana-create',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FiatWithdrawManaCreatePage implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  goto(){
+    let param: NavigationExtras = { queryParams: { type: "mana" } };
+    this.router.navigate(['/fiat-withdraw-exchange'], param);
   }
 
 }
