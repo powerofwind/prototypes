@@ -16,18 +16,30 @@ export class FiatTopupExchangePage implements OnInit {
         let value = params["type"];
         if (value) {
           this.type = value;
-          console.log(this.type); 
+          console.log(this.type);
         }
       });
     }
   }
-  
+
   ngOnInit() {
   }
 
-  goto(){
+  goto() {
     if (this.type == 'fiat') {
       let param: NavigationExtras = { queryParams: { type: "fiat" } };
+      this.router.navigate(['/fiat-topup-exchange-confirm'], param);
+    }
+    else if (this.type == 'qr') {
+      let param: NavigationExtras = { queryParams: { type: "qr" } };
+      this.router.navigate(['/fiat-topup-qr-confirm'], param);
+    }
+    else if (this.type == 'mana') {
+      let param: NavigationExtras = { queryParams: { type: "mana" } };
+      this.router.navigate(['/fiat-topup-mana-confirm'], param);
+    }
+    else if (this.type == 'crypto') {
+      let param: NavigationExtras = { queryParams: { type: "crypto" } };
       this.router.navigate(['/fiat-topup-exchange-confirm'], param);
     }
   }

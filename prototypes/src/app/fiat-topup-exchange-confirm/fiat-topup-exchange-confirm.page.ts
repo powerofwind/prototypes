@@ -29,6 +29,10 @@ export class FiatTopupExchangeConfirmPage implements OnInit {
       let param: NavigationExtras = { queryParams: { type: "fiat" } };
       this.router.navigate(['/fiat-topup-fiat-create-success'], param);
     }
+    else if (this.type == 'crypto') {
+      let param: NavigationExtras = { queryParams: { type: "crypto" } };
+      this.router.navigate(['/fiat-topup-fiat-create-success'], param);
+    }
 
   }
 

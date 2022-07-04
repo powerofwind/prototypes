@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationExtras, Router } from '@angular/router';
 
 @Component({
   selector: 'app-fiat-topup-qr',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FiatTopupQrPage implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  goto(){
+    let param: NavigationExtras = { queryParams: { type: "qr" } };
+    this.router.navigate(['/fiat-topup-exchange'], param);
+
   }
 
 }
