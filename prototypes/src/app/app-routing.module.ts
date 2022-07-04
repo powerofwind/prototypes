@@ -236,9 +236,14 @@ const routes: Routes = [
     loadChildren: () => import('./fiat-topup-fiat-create/fiat-topup-fiat-create.module').then( m => m.FiatTopupFiatCreatePageModule)
   },
   {
+    path: 'fiat-topup-fiat-create/:type',
+    loadChildren: () => import('./fiat-topup-fiat-create/fiat-topup-fiat-create.module').then( m => m.FiatTopupFiatCreatePageModule)
+  },
+  {
     path: 'fiat-topup-exchange-confirm',
     loadChildren: () => import('./fiat-topup-exchange-confirm/fiat-topup-exchange-confirm.module').then( m => m.FiatTopupExchangeConfirmPageModule)
-  },  {
+  },
+  {
     path: 'fiat-topup-qr-confirm',
     loadChildren: () => import('./fiat-topup-qr-confirm/fiat-topup-qr-confirm.module').then( m => m.FiatTopupQrConfirmPageModule)
   },
@@ -249,7 +254,11 @@ const routes: Routes = [
   {
     path: 'fiat-topup-mana-confirm',
     loadChildren: () => import('./fiat-topup-mana-confirm/fiat-topup-mana-confirm.module').then( m => m.FiatTopupManaConfirmPageModule)
+  },  {
+    path: 'fiat-topup-fiat-create-success',
+    loadChildren: () => import('./fiat-topup-fiat-create-success/fiat-topup-fiat-create-success.module').then( m => m.FiatTopupFiatCreateSuccessPageModule)
   },
+
 
 
 
