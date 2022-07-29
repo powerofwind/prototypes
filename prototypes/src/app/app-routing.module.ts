@@ -94,6 +94,10 @@ const routes: Routes = [
     path: 'option-dialog-no-submit',
     loadChildren: () => import('./option-dialog-no-submit/option-dialog-no-submit.module').then( m => m.OptionDialogNoSubmitPageModule)
   },
+  {
+    path: 'one-prototype-home',
+    loadChildren: () => import('./one-prototype-home/one-prototype-home.module').then( m => m.OnePrototypeHomePageModule)
+  },
 
 
 ];
