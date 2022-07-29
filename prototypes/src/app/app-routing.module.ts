@@ -98,6 +98,10 @@ const routes: Routes = [
     path: 'one-prototype-home',
     loadChildren: () => import('./one-prototype-home/one-prototype-home.module').then( m => m.OnePrototypeHomePageModule)
   },
+  {
+    path: 'one-prototype-finanace-menu',
+    loadChildren: () => import('./one-prototype-finanace-menu/one-prototype-finanace-menu.module').then( m => m.OnePrototypeFinanaceMenuPageModule)
+  },
 
 
 ];
