@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'one-prototype-home',
     pathMatch: 'full'
   },
   {
@@ -90,7 +90,8 @@ const routes: Routes = [
   {
     path: 'form-service',
     loadChildren: () => import('./form-service/form-service.module').then( m => m.FormServicePageModule)
-  },  {
+  },
+  {
     path: 'option-dialog-no-submit',
     loadChildren: () => import('./option-dialog-no-submit/option-dialog-no-submit.module').then( m => m.OptionDialogNoSubmitPageModule)
   },
@@ -101,6 +102,10 @@ const routes: Routes = [
   {
     path: 'one-prototype-finanace-menu',
     loadChildren: () => import('./one-prototype-finanace-menu/one-prototype-finanace-menu.module').then( m => m.OnePrototypeFinanaceMenuPageModule)
+  },
+  {
+    path: 'consent-kyc',
+    loadChildren: () => import('./consent-kyc/consent-kyc.module').then( m => m.ConsentKycPageModule)
   },
 
 

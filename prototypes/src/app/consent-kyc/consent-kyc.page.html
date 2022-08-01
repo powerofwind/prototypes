@@ -1,0 +1,174 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>คำขออนุญาตให้คุรเป็น Rider</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content mode="ios">
+  <ng-container>
+    <!-- <ng-container *ngIf="data$ | async as data"> -->
+    <ion-list lines="none">
+      <div class="ion-margin-bottom">
+        <ion-card color="tertiary">
+          <ion-card-content class="ion-no-padding ion-padding">
+            <div class="ion-text-center ion-padding">
+              <ion-avatar slot="start" class="avatar-l center">
+                <img [src]="">
+              </ion-avatar>
+              <ion-label class="ion-text-center">
+                <b> data.bizName }}</b><br>
+                <b> data.bizName2 }}</b><br>
+              </ion-label>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </div>
+
+      <div class="ion-margin-bottom">
+        <ion-card color="tertiary">
+          <ion-card-content class="ion-no-padding ion-padding">
+            <ion-label>
+              <b>
+                ขออนุญาตเชื่อมระบบกับบัญชีของคุณ
+              </b>
+            </ion-label><br>
+            <ion-label>
+              บริษัท Delivery ต้องการเชื่อมต่อบัญชี Name ของคุณเพื่อเป็น Rider ของบริษัทโปรดอ่าน
+              และยินยอมข้อตกลงในการทำสัญญาเพื่อใชข้งานระบบ
+            </ion-label>
+          </ion-card-content>
+        </ion-card>
+      </div>
+
+      <div class="ion-margin-bottom">
+        <ion-card color="tertiary">
+          <ion-card-content class="ion-no-padding ion-padding">
+            <ion-label>
+              <b>
+                ผู้ใช้
+              </b>
+            </ion-label>
+            <div class="ion-text-center ion-padding">
+              <ion-avatar slot="start" class="avatar-l center">
+                <img [src]="">
+              </ion-avatar>
+              <ion-label class="ion-text-center">
+                <b> data.Name }}</b>
+              </ion-label>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </div>
+
+      <div class="ion-margin-bottom">
+        <ion-card color="tertiary">
+          <ion-card-content class="ion-no-padding ion-padding">
+            <ion-label>
+              <b>
+                นโยบายของบริษัท
+              </b>
+            </ion-label><br>
+            <ion-label>
+              จะได้รับค่าตอบแทน 10 บาทต่อรอบ หากเกินระยะ 1 กิโลเมตรแรกจะให้ค่าตอบแทนเพิ่มตามระยะทางที่เพิ่มขึ้น
+            </ion-label>
+          </ion-card-content>
+        </ion-card>
+      </div>
+
+      <div class="ion-margin-bottom">
+        <ion-card color="tertiary">
+          <ion-card-content class="ion-no-padding ion-padding">
+            <ion-label>
+              <b>
+                ค่าตอบแทน
+              </b>
+            </ion-label><br>
+            <div class="ion-text-center">
+              <ion-label>
+                <b>
+                  10.00 THB/รอบ
+                </b>
+              </ion-label>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </div>
+
+      <div class="ion-margin-bottom">
+        <ion-card color="tertiary">
+          <ion-card-content class="ion-no-padding ion-padding">
+            <ion-label>
+              <b>
+                ค่าตอบแทนเพิ่มเติม
+              </b>
+            </ion-label><br>
+            <div class="ion-padding-start">
+              <ion-label>
+                <b>
+                  2 THB/กิโลเมตร(ระยะทางที่เกินกำหนด)
+                </b>
+              </ion-label>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </div>
+
+
+      <!-- checkbox -->
+      <div>
+        <ion-card color="tertiary">
+          <ion-card-content class="ion-no-padding ion-padding">
+            <ion-label>
+              <b>
+                ขออนุญาตเข้าถึงข้อมูลส่วนตัว
+              </b>
+            </ion-label>
+            <div class="ion-text-center ion-no-padding">
+              <ion-item lines="none" color="tertiary">
+                <ion-label class="ion-margin-start">
+                  <h3><b>ขออนุญาตเข้าถึงข้อมูลที่จำเป็นสำหรับการให้บริการแก่คุณ</b></h3>
+                </ion-label>
+                <ion-checkbox slot="start" color="primary" mode="md" class="ion-no-margin">
+                </ion-checkbox>
+              </ion-item>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </div>
+
+      <form [formGroup]="fg" (ngSubmit)="onSave()">
+        <div class="ion-margin">
+          <ion-card color="tertiary" class="ion-no-padding border-radius">
+            <ion-list class="ion-margin-bottom" lines="none">
+              <ion-list-header mode="md" color="tertiary">
+                <ion-label>
+                  <h3>ยอมรับข้อตกลง
+                    <ion-text color="danger">
+                      <!-- <ion-text color="danger" *ngIf="isInvalid('isAgree')"> -->
+                      คุณยังไม่เลือกข้อตกลง
+                    </ion-text>
+                  </h3>
+                </ion-label>
+              </ion-list-header>
+              <ion-radio-group formControlName="isAgree" mode="md">
+                <ion-item color="tertiary">
+                  <ion-label>
+                    <h3><b>อนุญาต</b></h3>
+                  </ion-label>
+                  <ion-radio slot="start" value="true"></ion-radio>
+                </ion-item>
+                <ion-item color="tertiary">
+                  <ion-label>
+                    <h3><b>ปฏิเสธ</b></h3>
+                  </ion-label>
+                  <ion-radio slot="start" value="false"></ion-radio>
+                </ion-item>
+              </ion-radio-group>
+            </ion-list>
+          </ion-card>
+        </div>
+        <ion-button id="app-form-submit" color="danger" class="ion-no-margin" expand="full" type="submit">Confirm
+        </ion-button>
+      </form>
+    </ion-list>
+  </ng-container>
