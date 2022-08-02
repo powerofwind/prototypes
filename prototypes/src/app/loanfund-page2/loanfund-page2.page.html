@@ -1,9 +1,207 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>loanfund-page2</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content mode="ios">
 
-<ion-content>
+  <ion-list lines="none">
+
+      <ion-item color="tertiary" class="ion-padding-vertical">
+          <ion-avatar slot="start" class="avatar-m">
+              <img src="assets/imgs/defaultshop.png">
+          </ion-avatar>
+          <ion-label>
+              <h2><b>กองทุนกู้ยืม</b></h2>
+          </ion-label>
+          <ion-button class="no-shadow ion-no-margin" mode="md" color="danger" size="small" shape="round" slot="end">
+              <ion-label class="ion-margin">
+                  + เพิ่มสินค้า
+              </ion-label>
+          </ion-button>
+      </ion-item>
+
+      <ion-card color="tertiary">
+          <ion-card-content class="ion-no-padding">
+              <ion-item class="ion-no-padding" color="tertiary" lines="full">
+                  <ion-grid class="ion-padding">
+                      <ion-row>
+                          <ion-col class="ion-no-padding">
+                              <ion-label>
+                                  <h3 class="line-height2"><b>รายละเอียดธุรกรรม</b></h3>
+                              </ion-label>
+                          </ion-col>
+                      </ion-row>
+                      <ion-row>
+                          <ion-col class="ion-no-padding">
+                              <ion-label color="medium">
+                                  <h3 class="line-height2">จำนวนเงิน</h3>
+                              </ion-label>
+                          </ion-col>
+                          <ion-col class="ion-no-padding ion-text-right">
+                              <ion-label color="medium">
+                                  <h3>50000.00
+                                      <small>THB</small>
+                                  </h3>
+                              </ion-label>
+                          </ion-col>
+                      </ion-row>
+                      <ion-row>
+                          <ion-col class="ion-no-padding">
+                              <ion-label color="medium">
+                                  <h3 class="line-height2">ชำระเกินเวลาที่กำหนดปรับ</h3>
+                              </ion-label>
+                          </ion-col>
+                          <ion-col class="ion-no-padding ion-text-right">
+                              <ion-label color="medium">
+                                  <h3>500.00
+                                      <small>THB</small>
+                                  </h3>
+                              </ion-label>
+                          </ion-col>
+                      </ion-row>
+                      <ion-row>
+                          <ion-col class="ion-no-padding">
+                              <ion-label color="medium">
+                                  <h3 class="line-height2">ส่วนลด</h3>
+                              </ion-label>
+                          </ion-col>
+                          <ion-col class="ion-no-padding ion-text-right">
+                              <ion-label color="medium">
+                                  <h3>0.00
+                                      <small>THB</small>
+                                  </h3>
+                              </ion-label>
+                          </ion-col>
+                      </ion-row>
+                      <ion-row>
+                          <ion-col class="ion-no-padding">
+                              <ion-label color="medium">
+                                  <h3 class="line-height2">รวมทั้งหมด</h3>
+                              </ion-label>
+                          </ion-col>
+                          <ion-col class="ion-no-padding ion-text-right">
+                              <ion-text color="danger">
+                                  <ion-label>
+                                      <h3>
+                                          <b>50500.00
+                      <small>THB</small>
+                    </b>
+                                      </h3>
+                                  </ion-label>
+                              </ion-text>
+                          </ion-col>
+                      </ion-row>
+                  </ion-grid>
+              </ion-item>
+
+              <ion-item color="tertiary" lines="full">
+                  <img slot="start" width="22" height="22" class="qr" src="assets/imgs/walletgray.png" />
+                  <ion-col class="ion-no-padding">
+                      <ion-label color="medium">
+                          <h3 class="line-height2">
+                              <!-- กระเป๋าของฉัน</h3> -->
+                              Mana_WalletX
+                          </h3>
+                      </ion-label>
+                  </ion-col>
+                  <ion-col class="ion-no-padding ion-text-right">
+                      <ion-label color="medium">
+                          <h3>
+                              <B>(60000.00 <small>THB</small>)</B> เปลี่ยน
+                          </h3>
+                      </ion-label>
+                  </ion-col>
+              </ion-item>
+
+              <ion-item color="tertiary" class="ion-no-padding">
+                  <ion-label class="ion-padding-start" color="medium">
+                      <h3>
+                          คูปอง
+                      </h3>
+                  </ion-label>
+                  <ion-fab horizontal="end">
+                      <ion-fab-button class="fab-small" size="small" color="danger">
+                          <ion-icon color="light" name="add"></ion-icon>
+                      </ion-fab-button>
+                      <ion-fab-list side="start">
+                          <ion-fab-button class="fab-small">
+                              <ion-icon name="wallet"></ion-icon>
+                          </ion-fab-button>
+                          <ion-fab-button class="fab-small">
+                              <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+                          </ion-fab-button>
+                      </ion-fab-list>
+                  </ion-fab>
+              </ion-item>
+          </ion-card-content>
+      </ion-card>
+
+  </ion-list>
+
+  <ion-list class="ion-margin-top" lines="full">
+      <ion-item class="ion-no-padding" color="tertiary" lines="none">
+          <ion-label class="ion-padding-start">
+              <h3><b>รายการที่สั่ง (1 ชิ้น)</b></h3>
+          </ion-label>
+      </ion-item>
+
+      <ion-item lines="none" color="tertiary" class="ion-no-padding">
+          <ion-grid class="ion-no-padding text-hidden">
+
+              <ion-row class="ion-no-padding ion-align-items-center ion-padding-top">
+                  <ion-col justify-content-center align-items-center class="ion-no-padding " size="auto" class="ion-text-center ion-padding-start">
+                      <img class="logo-l" src="assets/imgs/defaultshop.png">
+                  </ion-col>
+
+                  <ion-col class="ion-padding-start">
+                      <ion-row>
+                          <ion-col size="6">
+                              <ion-label>
+                                  <h3>X1 สัญญา xxxxxx2 งวดที่ 3/6</h3>
+                              </ion-label>
+                          </ion-col>
+                          <ion-col size="6">
+                              <ion-label>
+                                  <h3 class="ion-text-right">
+                                      <ion-text color="danger">
+                                          50000.00
+                                      </ion-text>
+                                      <small>&nbsp;THB</small>
+                                  </h3>
+                              </ion-label>
+                          </ion-col>
+                      </ion-row>
+
+                      <ion-row>
+                        <ion-col size="6">
+                            <ion-label>
+                                <h3>กำหนดชำระก่อน 2/7/2565</h3>
+                            </ion-label>
+                        </ion-col>
+                    </ion-row>
+
+                      <ion-row>
+                          <ion-col size="6">
+                              <ion-label color="danger">
+                                  <h3>ค้างชำระช้ากว่ากำหนด 2/7/2565</h3>
+                              </ion-label>
+                          </ion-col>
+                      </ion-row>
+
+
+                      <ion-row>
+                          <ion-col class="ion-no-padding ion-text-right">
+                              <ion-label color="medium">
+                                  <h3>
+                                      <span>แก้ไข&nbsp;ลบ</span>
+                                  </h3>
+                              </ion-label>
+                          </ion-col>
+                      </ion-row>
+
+                  </ion-col>
+              </ion-row>
+          </ion-grid>
+      </ion-item>
+  </ion-list>
 
 </ion-content>
+<ion-footer class="ion-no-border">
+  <ion-button color="danger" class="ion-no-margin" expand="full" type="submit" routerLink="/loanfund-page3">สั่งสินค้า</ion-button>
+</ion-footer>

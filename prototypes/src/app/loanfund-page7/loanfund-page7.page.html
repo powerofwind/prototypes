@@ -1,9 +1,76 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>loanfund-page7</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+  <ion-item lines="none" color="tertiary">
+    <ion-label class="ion-text-wrap">
+      <b>รายละเอียดการจ่ายเงิน</b>
+    </ion-label>
+  </ion-item>
+  <ion-item button color="tertiary" class="ion-no-padding">
+    <ion-grid class="ion-no-padding text-hidden">
+      <ion-row class="ion-no-padding ion-align-items-center ion-padding-start ion-padding-vertical">
+        <ion-col class="ion-no-padding" size="auto" class="ion-text-center">
+          <ion-thumbnail>
+            <img src="assets/imgs/defaultshop.png">
+          </ion-thumbnail>
+        </ion-col>
+        <ion-col class="ion-padding-start">
+          <ion-row>
+            <ion-col size="8">
+              <ion-label color="dark">
+                <h2><b>สัญญา xxxxxx1 งวดที่ 2/3</b></h2>
+              </ion-label>
+            </ion-col>
+            <ion-col size="4">
+              <div class="ion-text-right">
+                <ion-label color="medium">
+                  <h3>50000.00 <small>THB</small></h3>
+                </ion-label>
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="8">
+              <ion-label color="medium">
+                <h3>กำหนดชำระก่อน 2/7/2565</h3>
+              </ion-label>
+            </ion-col>
+            <!-- <ion-col size="4" [hidden]="!isDanger">
+                        <ion-label color="danger">
+                            <h3 class="ion-text-right">เลยกำหนดชำระ</h3>
+                        </ion-label>
+                    </ion-col> -->
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
 
+  <ion-item color="tertiary" lines="none">
+    <ion-label>
+      <h2>แบ่งชำระแบบเลือกระบุจำนวนเงิน</h2>
+    </ion-label>
+  </ion-item>
+  <ion-item color="tertiary" lines="none">
+    <ion-select class="ion-no-padding ion-padding-end ion-select-full" okText="ตกลง" cancelText="ยกเลิก"
+      interface="action-sheet" (ionChange)="onSelectChange($event)" placeholder="กรุณาเลือกเพื่อชำระ">
+      <ion-select-option value="1">ชำระทั้งหมด</ion-select-option>
+      <ion-select-option value="2">ชำระขั้นต่ำ</ion-select-option>
+      <ion-select-option value="3">ระบุจำนวนเงิน</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item lines="none" color="tertiary" *ngIf="xxx == '1'">
+    <ion-label> 50000.00 <small>THB</small></ion-label>
+  </ion-item>
+
+  <ion-item lines="none" color="tertiary" *ngIf="xxx == '2'">
+    <ion-label>3000.00 <small>THB</small></ion-label>
+  </ion-item>
+
+  <ion-item lines="none" color="tertiary" *ngIf="xxx == '3'">
+    <ion-input type="text" placeholder="ระบุจำนวนเงินขั้นต่ำ 3000 สูงสุด 50000"></ion-input>
+  </ion-item>
 </ion-content>
+
+<ion-footer>
+  <ion-button color="danger" class="ion-no-margin" expand="full" routerLink="/loanfund-page2">ชำระ</ion-button>
+</ion-footer>
