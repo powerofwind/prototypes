@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-one-prototype-home',
@@ -16,9 +17,24 @@ export class OnePrototypeHomePage implements OnInit {
     freeMode: true
   };
 
-  constructor() { }
+  constructor(public alertController: AlertController) { }
 
   ngOnInit() {
   }
+
+  async presentAlert() {
+    const alert = await this.alertController.create({
+      header: 'EV Charger',
+      message: 'คืนเงินทอนจากบริการ EV Charger',
+      buttons: ['ปิด']
+
+    });
+
+    await alert.present();
+
+    const { role } = await alert.onDidDismiss();
+    console.log('onDidDismiss resolved with role', role);
+  }
+
 
 }

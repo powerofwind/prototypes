@@ -108,6 +108,91 @@ const routes: Routes = [
     loadChildren: () => import('./consent-kyc/consent-kyc.module').then( m => m.ConsentKycPageModule)
   },
   {
+    path: 'ev-page1',
+    loadChildren: () => import('./ev-page1/ev-page1.module').then( m => m.EvPage1PageModule)
+  },
+  {
+    path: 'ev-page2',
+    loadChildren: () => import('./ev-page2/ev-page2.module').then( m => m.EvPage2PageModule)
+  },
+  {
+    path: 'ev-page3',
+    loadChildren: () => import('./ev-page3/ev-page3.module').then( m => m.EvPage3PageModule)
+  },
+  {
+    path: 'ev-page4',
+    loadChildren: () => import('./ev-page4/ev-page4.module').then( m => m.EvPage4PageModule)
+  },
+  {
+    path: 'ev-page5',
+    loadChildren: () => import('./ev-page5/ev-page5.module').then( m => m.EvPage5PageModule)
+  },
+  {
+    path: 'loan-page1',
+    loadChildren: () => import('./loan-page1/loan-page1.module').then( m => m.LoanPage1PageModule)
+  },
+  {
+    path: 'loan-page2',
+    loadChildren: () => import('./loan-page2/loan-page2.module').then( m => m.LoanPage2PageModule)
+  },
+
+  {
+    path: 'loan-page4',
+    loadChildren: () => import('./loan-page4/loan-page4.module').then( m => m.LoanPage4PageModule)
+  },
+  {
+    path: 'loan-page5',
+    loadChildren: () => import('./loan-page5/loan-page5.module').then( m => m.LoanPage5PageModule)
+  },
+  {
+    path: 'loan-page6',
+    loadChildren: () => import('./loan-page6/loan-page6.module').then( m => m.LoanPage6PageModule)
+  },
+  {
+    path: 'loan-page3',
+    loadChildren: () => import('./loan-page3/loan-page3.module').then( m => m.LoanPage3PageModule)
+  },
+  {
+    path: 'loan-page7',
+    loadChildren: () => import('./loan-page7/loan-page7.module').then( m => m.LoanPage7PageModule)
+  },
+  {
+    path: 'condition-timer-template',
+    loadChildren: () => import('./condition-timer-template/condition-timer-template.module').then( m => m.ConditionTimerTemplatePageModule)
+  },
+  {
+    path: 'consent-register-template',
+    loadChildren: () => import('./consent-register-template/consent-register-template.module').then( m => m.ConsentRegisterTemplatePageModule)
+  },
+  {
+    path: 'option-dialog-binding',
+    loadChildren: () => import('./option-dialog-binding/option-dialog-binding.module').then( m => m.OptionDialogBindingPageModule)
+  },
+  {
+    path: 'form-confirm-dialog',
+    loadChildren: () => import('./form-confirm-dialog/form-confirm-dialog.module').then( m => m.FormConfirmDialogPageModule)
+  },
+  {
+    path: 'form-service',
+    loadChildren: () => import('./form-service/form-service.module').then( m => m.FormServicePageModule)
+  },
+  {
+    path: 'option-dialog-no-submit',
+    loadChildren: () => import('./option-dialog-no-submit/option-dialog-no-submit.module').then( m => m.OptionDialogNoSubmitPageModule)
+  },
+  {
+    path: 'one-prototype-home',
+    loadChildren: () => import('./one-prototype-home/one-prototype-home.module').then( m => m.OnePrototypeHomePageModule)
+  },
+  {
+    path: 'one-prototype-finanace-menu',
+    loadChildren: () => import('./one-prototype-finanace-menu/one-prototype-finanace-menu.module').then( m => m.OnePrototypeFinanaceMenuPageModule)
+  },
+  {
+    path: 'consent-kyc',
+    loadChildren: () => import('./consent-kyc/consent-kyc.module').then( m => m.ConsentKycPageModule)
+  },
+  {
     path: 'coupon01main',
     loadChildren: () => import('./coupon01main/coupon01main.module').then( m => m.Coupon01mainPageModule)
   },
@@ -144,6 +229,7 @@ const routes: Routes = [
     loadChildren: () => import('./coupon02register/coupon02register.module').then( m => m.Coupon02registerPageModule)
   }
 ];
+
 
 @NgModule({
   imports: [

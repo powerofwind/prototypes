@@ -3,13 +3,13 @@
     <ion-label class="text-red ion-padding-start"><b>รายการโปรด</b></ion-label>
   </ion-item>
   <ion-row>
-    <ion-col size="10">
+    <ion-col size="10"  mode="md">
 
       <!-- Do not forget implement slideOpts's value in typescript -->
       <ion-slides [options]="slideOpts">
 
         <ion-slide class="ion-no-margin">
-          <ion-item class="ion-text-center ion-no-padding shortcut ion-no-margin" color="light" lines="none">
+          <ion-item class="ion-text-center ion-no-padding shortcut ion-no-margin" color="light" lines="none" [routerLink]="'/loan-page1'">
             <ion-label class="ion-no-padding ion-no-margin ion-text-center">
               <ion-text>
                 <img class="ion-text-center" src="assets/imgs/defaultshop.png">
@@ -20,7 +20,7 @@
         </ion-slide>
 
         <ion-slide class="ion-no-margin">
-          <ion-item class="ion-text-center ion-no-padding shortcut ion-no-margin" color="light" lines="none">
+          <ion-item class="ion-text-center ion-no-padding shortcut ion-no-margin" color="light" lines="none" [routerLink]="'/ev-page1'">
             <ion-label class="ion-no-padding ion-no-margin ion-text-center">
               <ion-text>
                 <img class="ion-text-center" src="assets/imgs/defaultshop.png">
@@ -49,6 +49,101 @@
 <ion-content color="tertiary" mode="ios">
 
   <ion-list lines="full" class="ion-no-padding" routerLink="/consent-kyc">
+
+    <!--TODO : เงื่่อน ชาร์จ EV จะต้องมี dlg ได้รับเงินคืนด้วย (Escrow) -->
+    <ion-item-sliding routerLink="/ev-homefeed-refund-detail" color="danger">
+      <ion-item button color="tertiary" class="ion-no-padding">
+        <ion-grid class="ion-no-padding text-hidden">
+
+          <ion-row class="ion-no-padding ion-align-items-center ion-padding-start ion-padding-vertical">
+            <ion-col class="ion-no-padding" size="auto" class="ion-text-center">
+              <ion-avatar class="avatar-m">
+                <img src="assets/imgs/defaultshop.png">
+              </ion-avatar>
+            </ion-col>
+
+            <ion-col class="ion-padding-start">
+              <ion-row>
+                <ion-col size="8">
+                  <ion-label color="dark">
+                    <h2><b>ได้รับเงินคืน</b></h2>
+                  </ion-label>
+                </ion-col>
+                <ion-col size="4">
+                  <div class="ion-text-right">
+                    <ion-label color="medium">
+                      <h3><img width="12" src="assets/imgs/timered.png"> 22 hr</h3>
+                    </ion-label>
+                  </div>
+                </ion-col>
+              </ion-row>
+
+              <ion-row>
+                <ion-col size="8">
+                  <ion-label color="medium">
+                    <h3>รายละเอียด</h3>
+                  </ion-label>
+                </ion-col>
+                <ion-col size="4">
+                  <ion-label color="danger">
+                    <h3 class="ion-text-right">สถานะ</h3>
+                  </ion-label>
+                </ion-col>
+              </ion-row>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+
+    </ion-item-sliding>
+
+    <!--TODO : เงื่่อน ชาร์จ EV -->
+    <ion-item-sliding color="danger">
+      <ion-item button color="tertiary" class="ion-no-padding" routerLink="/ev-page5">
+        <ion-grid class="ion-no-padding text-hidden">
+
+          <ion-row class="ion-no-padding ion-align-items-center ion-padding-start ion-padding-vertical">
+            <ion-col class="ion-no-padding" size="auto" class="ion-text-center">
+              <ion-avatar class="avatar-m">
+                <img src="assets/imgs/defaultshop.png">
+              </ion-avatar>
+            </ion-col>
+
+            <ion-col class="ion-padding-start">
+              <ion-row>
+                <ion-col size="8">
+                  <ion-label color="dark">
+                    <h2><b>จ่ายเงินสำเร็จ</b></h2>
+                  </ion-label>
+                </ion-col>
+                <ion-col size="4">
+                  <div class="ion-text-right">
+                    <ion-label color="medium">
+                      <h3><img width="12" src="assets/imgs/timered.png"> 22 hr</h3>
+                    </ion-label>
+                  </div>
+                </ion-col>
+              </ion-row>
+
+              <ion-row>
+                <ion-col size="8">
+                  <ion-label color="medium">
+                    <h3>รายละเอียด</h3>
+                  </ion-label>
+                </ion-col>
+                <ion-col size="4">
+                  <ion-label color="danger">
+                    <h3 class="ion-text-right">กำลังชาร์ต</h3>
+                  </ion-label>
+                </ion-col>
+              </ion-row>
+
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+
+    </ion-item-sliding>
 
     <ion-item-sliding color="danger">
       <ion-item button color="tertiary" class="ion-no-padding">
