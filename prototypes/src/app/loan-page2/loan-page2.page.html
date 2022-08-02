@@ -1,0 +1,99 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>คำขออนุญาตในการสมัครสมาชิก</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form [formGroup]="fg">
+
+    <ion-card color="tertiary" class="ion-text-center ion-padding-top">
+      <ion-avatar color="tertiary" class="avatar-l center ion-margin-top ion-margin-bottom">
+        <img src="assets/imgs/defaultshop.png" />
+      </ion-avatar>
+      <ion-label>
+        <h2><b>อานนท์ บางสาน</b></h2>
+      </ion-label>
+
+      <ion-label class="ion-margin-start">
+        <h3><b>ขอดำเนินการกู้เงินกับ</b></h3>
+      </ion-label>
+      <ion-avatar color="tertiary" class="avatar-l center ion-margin-top ion-margin-bottom">
+        <img src="assets/imgs/defaultshop.png" />
+      </ion-avatar>
+      <ion-label>
+        <h2><b>สหกรณ์ออมทรัพย์</b></h2>
+      </ion-label>
+    </ion-card>
+
+    <ion-card color="tertiary" class="ion-padding">
+      <ion-label color="medium">
+        <p>รายละเอียดร้าน</p>
+        <p>ป๊อกอาร์ติสต์ สตรอว์เบอร์รีโบรชัวร์ แจ๊กพ็อตตอกย้ำริกเตอร์ เบิร์น อิเลียดซาตาน เทคโนแพลนสันทนาการ
+          สหัสวรรษสโตร์ เบิร์นวอเตอร์ ไกด์แมคเคอเรลโอเพ่นเวสต์ แทงกั๊กอัลไซเมอร์ล็อบบี้แอ๊บแบ๊ว แคทวอล์คมาร์ตฟอร์ม
+          ซ้อเห่ย มาเฟียเกจิเซนเซอร์บอมบ์ โปรเจกต์เก๋ากี้ศิรินทร์กาญจนาภิเษกกรีน ตรวจสอบรอยัลตี้อัลไซเมอร์สแล็ก
+          ไอซียูอ่อนด้อยกุนซือดีลเลอร์ดัมพ์</p>
+      </ion-label>
+    </ion-card>
+
+    <ion-card color="tertiary" class="ion-padding">
+      <ion-label color="medium" class="ion-padding-top">Optionals</ion-label>
+      <ion-item color="tertiary" lines="none">
+        <ion-checkbox class="checkbox-checked" mode="ios" color="danger" slot="start">
+        </ion-checkbox>
+        <ion-label>อนุญาตให้ใช้ข้อมูล KYC</ion-label>
+      </ion-item>
+      <ion-item color="tertiary" lines="none">
+        <ion-checkbox class="checkbox-checked" mode="ios" color="danger" slot="start">
+        </ion-checkbox>
+        <ion-label>ยอมรับให้ส่งใบเรียกเก็บเงินเข้า Feed</ion-label>
+      </ion-item>
+    </ion-card>
+
+    <ion-card color="tertiary" class="ion-padding">
+      <ion-label color="medium">
+        เลขที่สัญญา
+        <ion-text color="danger" *ngIf="isInvalid('loanContractId')">กรุณาระบุเลขที่สัญญา</ion-text>
+      </ion-label>
+      <ion-item lines="none" routerLink="/loan-page3" mode="md">
+        <ion-input readonly="true" placeholder="กรอกเลขที่สัญญา" formControlName="loanContractId"></ion-input>
+        <ion-icon name="repeat-outline"></ion-icon>
+      </ion-item>
+    </ion-card>
+
+    <div class="ion-margin">
+      <ion-card color="tertiary" class="ion-no-padding border-radius">
+        <ion-list class="ion-margin-bottom" lines="none">
+          <ion-list-header mode="md" color="tertiary">
+            <ion-label>
+              <h3>ยอมรับข้อตกลง
+                <ion-text color="danger" *ngIf="isInvalid('isAgree')">คุณยังไม่เลือกการอนุญาตเข้าใช้งาน</ion-text>
+              </h3>
+            </ion-label>
+          </ion-list-header>
+          <ion-radio-group formControlName="isAgree" mode="md">
+            <ion-item color="tertiary">
+              <ion-label>
+                <h3><b>อนุญาต</b></h3>
+              </ion-label>
+              <ion-radio slot="start" value="true"></ion-radio>
+            </ion-item>
+            <ion-item color="tertiary">
+              <ion-label>
+                <h3><b>ปฏิเสธ</b></h3>
+              </ion-label>
+              <ion-radio slot="start" value="false"></ion-radio>
+            </ion-item>
+          </ion-radio-group>
+        </ion-list>
+      </ion-card>
+    </div>
+
+  </form>
+
+</ion-content>
+
+<ion-footer>
+  <ion-button type="submit" color="danger" ion-button expand="full" no-margin (click)="onSubmit()">ตกลง</ion-button>
+</ion-footer>

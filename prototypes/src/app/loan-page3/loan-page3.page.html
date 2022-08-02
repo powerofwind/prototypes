@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>สัญญา</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item color="tertiary" lines="none">
+    <ion-label position="stacked">เลขที่สัญญา</ion-label>
+    <ion-input type="text" placeholder="กรุณาระบุเลขที่สัญญา" [value]="loanContractId" (ionChange)="UpdateLoanContractId($event)"></ion-input>
+  </ion-item>
+
+  <ion-label color="medium">
+    <p class="ion-padding">เลขที่สัญญา สามารถดูได้จากสัญญาเงินกู้ที่เคยดำเนินการกู้เงินกับสหกรณ์ออมทรัพย์
+      กรรมการพัฒนาชุมชน จำกัด เป็นที่เรียบร้อยแล้ว</p>
+  </ion-label>
+</ion-content>
+
+<ion-footer class="ion-text-right">
+  <ion-card color="tertiary">
+    <ion-button color="medium" ion-button fill="clear" (click)="onDismiss()">ยกเลิก</ion-button>
+    <ion-button type="submit" color="danger" ion-button fill="clear" (click)="onSubmit()">ตกลง</ion-button>
+  </ion-card>
+</ion-footer>
