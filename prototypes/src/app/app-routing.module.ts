@@ -107,8 +107,42 @@ const routes: Routes = [
     path: 'consent-kyc',
     loadChildren: () => import('./consent-kyc/consent-kyc.module').then( m => m.ConsentKycPageModule)
   },
-
-
+  {
+    path: 'coupon01main',
+    loadChildren: () => import('./coupon01main/coupon01main.module').then( m => m.Coupon01mainPageModule)
+  },
+  {
+    path: 'coupon03cart',
+    loadChildren: () => import('./coupon03cart/coupon03cart.module').then( m => m.Coupon03cartPageModule)
+  },
+  {
+    path: 'coupon04cartconfirm',
+    loadChildren: () => import('./coupon04cartconfirm/coupon04cartconfirm.module').then( m => m.Coupon04cartconfirmPageModule)
+  },
+  {
+    path: 'coupon05topup',
+    loadChildren: () => import('./coupon05topup/coupon05topup.module').then( m => m.Coupon05topupPageModule)
+  },
+  {
+    path: 'coupon06topupdetail',
+    loadChildren: () => import('./coupon06topupdetail/coupon06topupdetail.module').then( m => m.Coupon06topupdetailPageModule)
+  },
+  {
+    path: 'coupon07billdetail',
+    loadChildren: () => import('./coupon07billdetail/coupon07billdetail.module').then( m => m.Coupon07billdetailPageModule)
+  },
+  {
+    path: 'coupon08received',
+    loadChildren: () => import('./coupon08received/coupon08received.module').then( m => m.Coupon08receivedPageModule)
+  },
+  {
+    path: 'landingpage',
+    loadChildren: () => import('./landingpage/landingpage.module').then( m => m.LandingpagePageModule)
+  },
+  {
+    path: 'coupon02register',
+    loadChildren: () => import('./coupon02register/coupon02register.module').then( m => m.Coupon02registerPageModule)
+  }
 ];
 
 @NgModule({
