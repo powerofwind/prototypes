@@ -19,22 +19,7 @@ const routes: Routes = [
     path: 'cart-checkout-template',
     loadChildren: () => import('./cart-checkout-template/cart-checkout-template.module').then( m => m.CartCheckoutTemplatePageModule)
   },
-  {
-    path: 'option-dialog-template',
-    loadChildren: () => import('./option-dialog-template/option-dialog-template.module').then( m => m.OptionDialogTemplatePageModule)
-  },
-  {
-    path: 'cart-dialog-template',
-    loadChildren: () => import('./cart-dialog-template/cart-dialog-template.module').then( m => m.CartDialogTemplatePageModule)
-  },
-  {
-    path: 'form-template',
-    loadChildren: () => import('./form-template/form-template.module').then( m => m.FormTemplatePageModule)
-  },
-  {
-    path: 'form-binding',
-    loadChildren: () => import('./form-binding/form-binding.module').then( m => m.FormBindingPageModule)
-  },
+ 
   {
     path: 'form-send-data',
     loadChildren: () => import('./form-send-data/form-send-data.module').then( m => m.FormSendDataPageModule)
@@ -51,22 +36,7 @@ const routes: Routes = [
     path: 'form-input-template',
     loadChildren: () => import('./form-input-template/form-input-template.module').then( m => m.FormInputTemplatePageModule)
   },
-  {
-    path: 'condition-template',
-    loadChildren: () => import('./condition-template/condition-template.module').then( m => m.ConditionTemplatePageModule)
-  },
-  {
-    path: 'agreement-template',
-    loadChildren: () => import('./agreement-template/agreement-template.module').then( m => m.AgreementTemplatePageModule)
-  },
-  {
-    path: 'consent-info-user-template',
-    loadChildren: () => import('./consent-info-user-template/consent-info-user-template.module').then( m => m.ConsentInfoUserTemplatePageModule)
-  },
-  {
-    path: 'consent-info-manager-template',
-    loadChildren: () => import('./consent-info-manager-template/consent-info-manager-template.module').then( m => m.ConsentInfoManagerTemplatePageModule)
-  },
+
   {
     path: 'home-template',
     loadChildren: () => import('./home-template/home-template.module').then( m => m.HomeTemplatePageModule)
@@ -103,10 +73,7 @@ const routes: Routes = [
     path: 'one-prototype-finanace-menu',
     loadChildren: () => import('./one-prototype-finanace-menu/one-prototype-finanace-menu.module').then( m => m.OnePrototypeFinanaceMenuPageModule)
   },
-  {
-    path: 'consent-kyc',
-    loadChildren: () => import('./consent-kyc/consent-kyc.module').then( m => m.ConsentKycPageModule)
-  },
+ 
   {
     path: 'ev-page1',
     loadChildren: () => import('./ev-page1/ev-page1.module').then( m => m.EvPage1PageModule)
@@ -127,6 +94,42 @@ const routes: Routes = [
     path: 'ev-page5',
     loadChildren: () => import('./ev-page5/ev-page5.module').then( m => m.EvPage5PageModule)
   },
+
+
+  {
+    path: 'option-dialog-template',
+    loadChildren: () => import('./option-dialog-template/option-dialog-template.module').then( m => m.OptionDialogTemplatePageModule)
+  },
+  {
+    path: 'cart-dialog-template',
+    loadChildren: () => import('./cart-dialog-template/cart-dialog-template.module').then( m => m.CartDialogTemplatePageModule)
+  },
+  {
+    path: 'form-template',
+    loadChildren: () => import('./form-template/form-template.module').then( m => m.FormTemplatePageModule)
+  },
+  {
+    path: 'form-binding',
+    loadChildren: () => import('./form-binding/form-binding.module').then( m => m.FormBindingPageModule)
+  },
+
+  {
+    path: 'condition-template',
+    loadChildren: () => import('./condition-template/condition-template.module').then( m => m.ConditionTemplatePageModule)
+  },
+  {
+    path: 'agreement-template',
+    loadChildren: () => import('./agreement-template/agreement-template.module').then( m => m.AgreementTemplatePageModule)
+  },
+  {
+    path: 'consent-info-user-template',
+    loadChildren: () => import('./consent-info-user-template/consent-info-user-template.module').then( m => m.ConsentInfoUserTemplatePageModule)
+  },
+  {
+    path: 'consent-info-manager-template',
+    loadChildren: () => import('./consent-info-manager-template/consent-info-manager-template.module').then( m => m.ConsentInfoManagerTemplatePageModule)
+  },
+
   {
     path: 'loan-page1',
     loadChildren: () => import('./loan-page1/loan-page1.module').then( m => m.LoanPage1PageModule)
@@ -134,6 +137,11 @@ const routes: Routes = [
   {
     path: 'loan-page2',
     loadChildren: () => import('./loan-page2/loan-page2.module').then( m => m.LoanPage2PageModule)
+  },
+
+  {
+    path: 'loan-page3',
+    loadChildren: () => import('./loan-page3/loan-page3.module').then( m => m.LoanPage3PageModule)
   },
 
   {
@@ -148,13 +156,47 @@ const routes: Routes = [
     path: 'loan-page6',
     loadChildren: () => import('./loan-page6/loan-page6.module').then( m => m.LoanPage6PageModule)
   },
-  {
-    path: 'loan-page3',
-    loadChildren: () => import('./loan-page3/loan-page3.module').then( m => m.LoanPage3PageModule)
-  },
+
   {
     path: 'loan-page7',
     loadChildren: () => import('./loan-page7/loan-page7.module').then( m => m.LoanPage7PageModule)
+  },
+  {
+    path: 'loanfund-page1',
+    loadChildren: () => import('./loanfund-page1/loanfund-page1.module').then( m => m.LoanfundPage1PageModule)
+  },
+  {
+    path: 'loanfund-page2',
+    loadChildren: () => import('./loanfund-page2/loanfund-page2.module').then( m => m.LoanfundPage2PageModule)
+  },
+  {
+    path: 'loanfund-page3',
+    loadChildren: () => import('./loanfund-page3/loanfund-page3.module').then( m => m.LoanfundPage3PageModule)
+  },
+  {
+    path: 'loanfund-page4',
+    loadChildren: () => import('./loanfund-page4/loanfund-page4.module').then( m => m.LoanfundPage4PageModule)
+  },
+  {
+    path: 'loanfund-page5',
+    loadChildren: () => import('./loanfund-page5/loanfund-page5.module').then( m => m.LoanfundPage5PageModule)
+  },
+  {
+    path: 'loanfund-page6',
+    loadChildren: () => import('./loanfund-page6/loanfund-page6.module').then( m => m.LoanfundPage6PageModule)
+  },
+ 
+  {
+    path: 'loanfund-page7',
+    loadChildren: () => import('./loanfund-page7/loanfund-page7.module').then( m => m.LoanfundPage7PageModule)
+  },
+  {
+    path: 'loanfund-page8',
+    loadChildren: () => import('./loanfund-page8/loanfund-page8.module').then( m => m.LoanfundPage8PageModule)
+  },
+  {
+    path: 'loanfund-page9',
+    loadChildren: () => import('./loanfund-page9/loanfund-page9.module').then( m => m.LoanfundPage9PageModule)
   },
   {
     path: 'condition-timer-template',
@@ -168,26 +210,7 @@ const routes: Routes = [
     path: 'option-dialog-binding',
     loadChildren: () => import('./option-dialog-binding/option-dialog-binding.module').then( m => m.OptionDialogBindingPageModule)
   },
-  {
-    path: 'form-confirm-dialog',
-    loadChildren: () => import('./form-confirm-dialog/form-confirm-dialog.module').then( m => m.FormConfirmDialogPageModule)
-  },
-  {
-    path: 'form-service',
-    loadChildren: () => import('./form-service/form-service.module').then( m => m.FormServicePageModule)
-  },
-  {
-    path: 'option-dialog-no-submit',
-    loadChildren: () => import('./option-dialog-no-submit/option-dialog-no-submit.module').then( m => m.OptionDialogNoSubmitPageModule)
-  },
-  {
-    path: 'one-prototype-home',
-    loadChildren: () => import('./one-prototype-home/one-prototype-home.module').then( m => m.OnePrototypeHomePageModule)
-  },
-  {
-    path: 'one-prototype-finanace-menu',
-    loadChildren: () => import('./one-prototype-finanace-menu/one-prototype-finanace-menu.module').then( m => m.OnePrototypeFinanaceMenuPageModule)
-  },
+ 
   {
     path: 'consent-kyc',
     loadChildren: () => import('./consent-kyc/consent-kyc.module').then( m => m.ConsentKycPageModule)
