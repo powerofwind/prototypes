@@ -106,7 +106,8 @@ const routes: Routes = [
   {
     path: 'consent-kyc',
     loadChildren: () => import('./consent-kyc/consent-kyc.module').then( m => m.ConsentKycPageModule)
-  },  {
+  },
+  {
     path: 'ev-page1',
     loadChildren: () => import('./ev-page1/ev-page1.module').then( m => m.EvPage1PageModule)
   },
@@ -126,6 +127,31 @@ const routes: Routes = [
     path: 'ev-page5',
     loadChildren: () => import('./ev-page5/ev-page5.module').then( m => m.EvPage5PageModule)
   },
+  {
+    path: 'loan-page1',
+    loadChildren: () => import('./loan-page1/loan-page1.module').then( m => m.LoanPage1PageModule)
+  },
+  {
+    path: 'loan-page2',
+    loadChildren: () => import('./loan-page2/loan-page2.module').then( m => m.LoanPage2PageModule)
+  },
+
+  {
+    path: 'loan-page4',
+    loadChildren: () => import('./loan-page4/loan-page4.module').then( m => m.LoanPage4PageModule)
+  },
+  {
+    path: 'loan-page5',
+    loadChildren: () => import('./loan-page5/loan-page5.module').then( m => m.LoanPage5PageModule)
+  },
+  {
+    path: 'loan-page6',
+    loadChildren: () => import('./loan-page6/loan-page6.module').then( m => m.LoanPage6PageModule)
+  },  {
+    path: 'loan-page3',
+    loadChildren: () => import('./loan-page3/loan-page3.module').then( m => m.LoanPage3PageModule)
+  },
+
 
 
 
