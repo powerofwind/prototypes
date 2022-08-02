@@ -151,6 +151,10 @@ const routes: Routes = [
     path: 'loan-page3',
     loadChildren: () => import('./loan-page3/loan-page3.module').then( m => m.LoanPage3PageModule)
   },
+  {
+    path: 'loan-page7',
+    loadChildren: () => import('./loan-page7/loan-page7.module').then( m => m.LoanPage7PageModule)
+  },
 
 
 

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { LoanDataService } from 'src/services/loan-data.service';
 
 @Component({
   selector: 'app-loan-page2',
@@ -13,7 +14,7 @@ export class LoanPage2Page implements OnInit {
 
   public fg: FormGroup;
 
-  constructor(private fb: FormBuilder, private router: Router, private svc: LoanDataServiceService) {
+  constructor(private fb: FormBuilder, private router: Router, private svc: LoanDataService) {
 
     this.fg = this.fb.group({
       'loanContractId': [null, Validators.required],
@@ -45,7 +46,7 @@ export class LoanPage2Page implements OnInit {
       this.svc.activeContractId = loanContractId;
       this.svc.LoanContractId = "";
 
-      this.router.navigate(['/loan-m5']);
+      this.router.navigate(['/loan-page4']);
     }
 
   }

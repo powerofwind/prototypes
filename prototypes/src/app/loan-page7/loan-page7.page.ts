@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { LoanDataService } from 'src/services/loan-data.service';
 
 @Component({
-  selector: 'app-loan-page4',
-  templateUrl: './loan-page4.page.html',
-  styleUrls: ['./loan-page4.page.scss'],
+  selector: 'app-loan-page7',
+  templateUrl: './loan-page7.page.html',
+  styleUrls: ['./loan-page7.page.scss'],
 })
-export class LoanPage4Page implements OnInit {
+export class LoanPage7Page implements OnInit {
+
   public loanContractId: string = "-";
   constructor(private svc: LoanDataService) { }
 
@@ -20,3 +21,4 @@ export class LoanPage4Page implements OnInit {
   }
 
 }
+

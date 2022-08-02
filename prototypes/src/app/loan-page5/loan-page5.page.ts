@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-loan-page5',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoanPage5Page implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  private debugClickTime = 0;
+  onDebugClick() {
+
+    this.debugClickTime++;
+
+    if (this.debugClickTime >= 3) {
+      this.debugClickTime = 0;
+      this.router.navigate(['/loan-page6']);
+    }
+
   }
 
 }
