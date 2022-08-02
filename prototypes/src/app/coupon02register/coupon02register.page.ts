@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-coupon02register',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Coupon02registerPage implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  gotoPage() {
+    this.router.navigate(['/coupon03cart']);
   }
 
 }

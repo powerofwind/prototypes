@@ -1,9 +1,57 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Coupon08received</ion-title>
+    <ion-title>คูปองส่วนลด</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content mode="ios">
+  <ion-list lines="none" class="ion-text-center">
+    <ion-item color="tertiary" class="ion-margin-top">
+      <ion-avatar slot="start">
+        <img src="assets/imgs/logo.jpg">
+      </ion-avatar>
+      <ion-label color="medium">
+        <ion-text color="dark"><b>เดี๋ยวก็ละลาย</b></ion-text>
 
+        <!-- <h3><img width="12" height="12" class="qr" src="assets/imgs/coupon.PNG" />
+          data.distributerMerchant.name}}</h3> -->
+      </ion-label>
+    </ion-item>
+    <ion-card color="tertiary">
+      <img src="assets/imgs/coupon.PNG">
+    </ion-card>
+    <ion-item color="tertiary">
+      <ion-label color="dark">
+        <b>วันหมดอายุ : 01/07/2022 </b>
+        <!-- <ion-text color="medium">
+          <h3>
+            <img height="12" src="assets/imgs/shoplocation.png" />
+            data.distributerMerchant.fullAddress}}
+          </h3>
+        </ion-text> -->
+      </ion-label>
+    </ion-item>
+    <ion-item color="tertiary" class="ion-margin-top">
+      <ion-label>
+        <b>รายละเอียดคูปอง</b>
+        <ion-text class="ion-text-wrap">
+          <h3>คูปองนี้สามารถใช้กับสินค้าทุกชนิดในร้านเดี๋ยวก็ละลาย ไม่จำกัดราคาขั้นต่ำ</h3>
+        </ion-text>
+      </ion-label>
+    </ion-item>
+    <ion-item color="tertiary">
+      <ion-label>
+        <b>เงื่อนไขคูปอง</b>
+        <ion-text class="ion-text-wrap">
+          <h3>1. ใช้ได้กับสมาชิกร้านเดี๋ยวก็ละลายเท่านั้น</h3>
+          <h3>2. ระยะเวลาในการใช้ส่วนลดของแต่ละโค้ดเป็นไปตามที่บริษัทฯ กำหนด</h3>
+          <h3>3. โค้ดส่วนลดนี้ใช้ได้เพียง 1 ครั้งเท่านั้น ไม่สามารถนำมาใช้ซ้ำอีกได้</h3>
+        </ion-text>
+      </ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
+
+<ion-footer>
+  <ion-button color="danger" class="ion-no-margin" expand="full" routerLink="/one-prototype-home" >รับคูปอง</ion-button>
+</ion-footer>

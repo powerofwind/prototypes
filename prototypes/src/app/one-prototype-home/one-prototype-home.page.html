@@ -30,7 +30,7 @@
           </ion-item>
         </ion-slide>
 
-        <ion-slide class="ion-no-margin">
+        <ion-slide class="ion-no-margin" routerLink="/coupon01main">
           <ion-item class="ion-text-center ion-no-padding shortcut ion-no-margin" color="light" lines="none">
             <ion-label class="ion-no-padding ion-no-margin ion-text-center">
               <ion-text>
@@ -48,7 +48,7 @@
 
 <ion-content color="tertiary" mode="ios">
 
-  <ion-list lines="full" class="ion-no-padding">
+  <ion-list lines="full" class="ion-no-padding" routerLink="/consent-kyc">
 
     <ion-item-sliding color="danger">
       <ion-item button color="tertiary" class="ion-no-padding">
@@ -82,7 +82,7 @@
                   <ion-label color="medium">
                     <h3>เข้าร่วมงานเป็นไรเดอร์กับ GribFood</h3>
                   </ion-label>
-                </ion-col>          
+                </ion-col>
               </ion-row>
 
             </ion-col>
@@ -95,5 +95,6 @@
 </ion-content>
 
 <ion-footer class="ion-no-border">
-  <ion-button color="danger" class="ion-no-margin" expand="full" type="submit" [routerLink]="'/one-prototype-finanace-menu'">finance Menu</ion-button>
+  <ion-button color="danger" class="ion-no-margin" expand="full" type="submit"
+    [routerLink]="'/one-prototype-finanace-menu'">finance Menu</ion-button>
 </ion-footer>
