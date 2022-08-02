@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
+import { LoanDataService } from 'src/services/loan-data.service';
 
 @Component({
   selector: 'app-one-prototype-home',
@@ -16,8 +18,13 @@ export class OnePrototypeHomePage implements OnInit {
     loop: false,
     freeMode: true
   };
+  public feeds: any[] = [];
 
-  constructor(public alertController: AlertController) { }
+  constructor(public alertController: AlertController, private router: Router, private svc: LoanDataService) { }
+  
+  ionViewDidEnter() {
+    this.feeds = this.svc.feeds;
+  }
 
   ngOnInit() {
   }
@@ -37,4 +44,12 @@ export class OnePrototypeHomePage implements OnInit {
   }
 
 
+  onSelectItem(item){
+    this.svc.activeContractId = item.loanContractId;
+    this.router.navigate(['/loan-page4']);
+  }
+
 }
+
+
+
