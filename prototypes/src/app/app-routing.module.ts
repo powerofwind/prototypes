@@ -106,7 +106,27 @@ const routes: Routes = [
   {
     path: 'consent-kyc',
     loadChildren: () => import('./consent-kyc/consent-kyc.module').then( m => m.ConsentKycPageModule)
+  },  {
+    path: 'ev-page1',
+    loadChildren: () => import('./ev-page1/ev-page1.module').then( m => m.EvPage1PageModule)
   },
+  {
+    path: 'ev-page2',
+    loadChildren: () => import('./ev-page2/ev-page2.module').then( m => m.EvPage2PageModule)
+  },
+  {
+    path: 'ev-page3',
+    loadChildren: () => import('./ev-page3/ev-page3.module').then( m => m.EvPage3PageModule)
+  },
+  {
+    path: 'ev-page4',
+    loadChildren: () => import('./ev-page4/ev-page4.module').then( m => m.EvPage4PageModule)
+  },
+  {
+    path: 'ev-page5',
+    loadChildren: () => import('./ev-page5/ev-page5.module').then( m => m.EvPage5PageModule)
+  },
+
 
 
 ];
