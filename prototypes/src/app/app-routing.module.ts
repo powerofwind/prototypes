@@ -147,7 +147,8 @@ const routes: Routes = [
   {
     path: 'loan-page6',
     loadChildren: () => import('./loan-page6/loan-page6.module').then( m => m.LoanPage6PageModule)
-  },  {
+  },
+  {
     path: 'loan-page3',
     loadChildren: () => import('./loan-page3/loan-page3.module').then( m => m.LoanPage3PageModule)
   },
@@ -155,6 +156,43 @@ const routes: Routes = [
     path: 'loan-page7',
     loadChildren: () => import('./loan-page7/loan-page7.module').then( m => m.LoanPage7PageModule)
   },
+  {
+    path: 'loanfund-page1',
+    loadChildren: () => import('./loanfund-page1/loanfund-page1.module').then( m => m.LoanfundPage1PageModule)
+  },
+  {
+    path: 'loanfund-page2',
+    loadChildren: () => import('./loanfund-page2/loanfund-page2.module').then( m => m.LoanfundPage2PageModule)
+  },
+  {
+    path: 'loanfund-page3',
+    loadChildren: () => import('./loanfund-page3/loanfund-page3.module').then( m => m.LoanfundPage3PageModule)
+  },
+  {
+    path: 'loanfund-page4',
+    loadChildren: () => import('./loanfund-page4/loanfund-page4.module').then( m => m.LoanfundPage4PageModule)
+  },
+  {
+    path: 'loanfund-page5',
+    loadChildren: () => import('./loanfund-page5/loanfund-page5.module').then( m => m.LoanfundPage5PageModule)
+  },
+  {
+    path: 'loanfund-page6',
+    loadChildren: () => import('./loanfund-page6/loanfund-page6.module').then( m => m.LoanfundPage6PageModule)
+  },
+ 
+  {
+    path: 'loanfund-page7',
+    loadChildren: () => import('./loanfund-page7/loanfund-page7.module').then( m => m.LoanfundPage7PageModule)
+  },  {
+    path: 'loanfund-page8',
+    loadChildren: () => import('./loanfund-page8/loanfund-page8.module').then( m => m.LoanfundPage8PageModule)
+  },
+  {
+    path: 'loanfund-page9',
+    loadChildren: () => import('./loanfund-page9/loanfund-page9.module').then( m => m.LoanfundPage9PageModule)
+  },
+
 
 
 
