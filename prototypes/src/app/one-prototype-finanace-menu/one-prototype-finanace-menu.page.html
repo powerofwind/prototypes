@@ -28,7 +28,7 @@
           <ion-col class="ion-margin ion-text-center">
             <div class="financial-circle">
               <ion-label>
-                <h2><b class="ion-text-nowrap">Mana Wallect</b></h2>                
+                <h2><b class="ion-text-nowrap">Mana Wallet</b></h2>                
                 <ion-text color="danger">
                   <h3>THB</h3>
                   <h3>200.00</h3>
@@ -46,7 +46,7 @@
           </ion-col>
         </ion-row>
         <ion-row text-center>
-          <ion-col>
+          <ion-col  [routerLink]="'/wallet-main'">
             <div class=" ion-float-right ion-text-center">
               <img class="icon" width="50" height="50" src="assets/imgs/fnwallet.png"/>
               <br>
@@ -54,7 +54,7 @@
             </div>
           </ion-col>
           <ion-col size="2"></ion-col>
-          <ion-col>
+          <ion-col [routerLink]="'/account-main'">
             <div class="ion-float-left ion-text-center">
               <img class="icon" width="50" height="50" src="assets/imgs/fnaccount.png"/>
               <br>

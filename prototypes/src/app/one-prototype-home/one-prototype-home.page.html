@@ -1,47 +1,93 @@
-
 <ion-header>
   <ion-toolbar color="tertiary">
     <ion-button fill="clear" slot="start" color="danger" id="menu-outline">
       <ion-icon name="menu-outline"></ion-icon>
-    </ion-button>    
+    </ion-button>
   </ion-toolbar>
 </ion-header>
 <ion-popover trigger="menu-outline" [dismissOnSelect]="true">
-  <ng-template>
-    <ion-content mode="md">
+  <ng-template>    
+      <ion-item lines="none"  color="danger">
+        <ion-avatar slot="start" class="avatar-m">
+            <img src="assets/imgs/defaultshop.png">
+        </ion-avatar>
+        <ion-label>
+            <h2><b>mana01</b></h2>
+        </ion-label>   
+    </ion-item>
+      
       <ion-item lines="none">
-        <img src="assets/imgs/defaultshop.png">
-        <ion-label> หน้าหลัก</ion-label>
+        <ion-col size="1.5">
+          <ion-icon name="home-outline"> </ion-icon>
+        </ion-col>
+        <ion-col size="10.5">
+          <ion-label> หน้าหลัก</ion-label>
+        </ion-col>
       </ion-item>
-      <ion-item lines="none">
-        <ion-icon name="home-outline"> </ion-icon>
-        <ion-label> หน้าหลัก</ion-label>
+
+      <ion-item lines="none" color="tertiary">
+        <ion-col size="1.5">
+          <ion-icon name="home-outline"> </ion-icon>
+        </ion-col>
+        <ion-col size="10.5">
+          <ion-label>บัญชีผู้ใช้</ion-label>
+        </ion-col>
       </ion-item>
-      <ion-item lines="none">
-        <ion-icon name="home-outline"> </ion-icon>
-        <ion-label>หน้าหลัก</ion-label>
+
+      <ion-item lines="none" color="tertiary">
+        <ion-col size="1.5">
+          <ion-icon name="home-outline"> </ion-icon>
+        </ion-col>
+        <ion-col size="10.5">
+          <ion-label> สมาชิก</ion-label>
+        </ion-col>
       </ion-item>
-      <ion-item lines="none">
-        <ion-icon name="home-outline"> </ion-icon>
-        <ion-label>หน้าหลัก</ion-label>
+
+      <ion-item lines="none" color="tertiary">
+        <ion-col size="1.5">
+          <ion-icon name="home-outline"> </ion-icon>
+        </ion-col>
+        <ion-col size="10.5">
+          <ion-label> บัญชีธุรกิจของคุณ</ion-label>
+        </ion-col>
       </ion-item>
-      <ion-item lines="none">
-        <ion-icon name="home-outline"> </ion-icon>
-        <ion-label>หน้าหลัก</ion-label>
+
+      <ion-item lines="none" color="tertiary">     
+        <ion-col size="1.5">
+          <ion-icon name="home-outline"> </ion-icon>
+        </ion-col>
+        <ion-col size="10.5">
+          <ion-label> สำหรับนักพัฒนา</ion-label>
+        </ion-col>
       </ion-item>
-      <ion-item lines="none">
-        <ion-icon name="home-outline"> </ion-icon>
-        <ion-label>หน้าหลัก</ion-label>
+
+      <ion-item lines="none" color="tertiary">
+        <ion-col size="1.5">
+          <ion-icon name="home-outline"> </ion-icon>
+        </ion-col>
+        <ion-col size="10.5">
+          <ion-label> แจ้งปัญหา</ion-label>
+        </ion-col>
       </ion-item>
-      <ion-item lines="none">
-        <ion-icon name="home-outline"> </ion-icon>
-        <ion-label>หน้าหลัก</ion-label>
+
+      <ion-item lines="none" color="tertiary">
+        <ion-col size="1.5">
+          <ion-icon name="home-outline"> </ion-icon>
+        </ion-col>
+        <ion-col size="10.5">
+          <ion-label> เกี่ยวกับเรา</ion-label>
+        </ion-col>
       </ion-item>
-      <ion-item lines="none">
-        <ion-icon name="home-outline"> </ion-icon>
-        <ion-label>หน้าหลัก</ion-label>
+
+      <ion-item lines="none" color="tertiary">
+        <ion-col size="1.5">
+          <ion-icon name="home-outline"> </ion-icon>
+        </ion-col>
+        <ion-col size="10.5">
+          <ion-label> อากจากระบบ</ion-label>
+        </ion-col>
       </ion-item>
-    </ion-content>
+
   </ng-template>
 </ion-popover>
 

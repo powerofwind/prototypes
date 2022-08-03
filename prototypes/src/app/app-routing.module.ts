@@ -250,7 +250,15 @@ const routes: Routes = [
   {
     path: 'coupon02register',
     loadChildren: () => import('./coupon02register/coupon02register.module').then( m => m.Coupon02registerPageModule)
+  },  {
+    path: 'wallet-main',
+    loadChildren: () => import('./wallet-main/wallet-main.module').then( m => m.WalletMainPageModule)
+  },
+  {
+    path: 'account-main',
+    loadChildren: () => import('./account-main/account-main.module').then( m => m.AccountMainPageModule)
   }
+
 ];
 
 
