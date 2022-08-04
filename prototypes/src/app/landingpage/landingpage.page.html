@@ -12,20 +12,20 @@
   <ion-list class="ion-no-padding" lines="none">
     <!-- สมัครสมาชิก -->
     <ng-container>
-      <ion-item color="tertiary" *ngIf="isAgree == undefined">
+      <ion-item color="tertiary" *ngIf="title == 1">
         <ion-icon name="alert-circle-outline" color="medium"></ion-icon>
         <ion-label class="ion-padding-start" color="medium"><b>สมัครสมาชิกของร้านเดี๋ยวก็ละลาย</b>
         </ion-label>
       </ion-item>
 
-      <ion-item color="tertiary" *ngIf="isAgree">
+      <ion-item color="tertiary" *ngIf="title >1">
         <ion-icon name="checkmark-circle-outline" color="primary"></ion-icon>
         <ion-label class="ion-padding-start" color="primary"><b>สมัครสมาชิกของร้านเดี๋ยวก็ละลาย</b>
         </ion-label>
       </ion-item>
 
       <ion-card color="tertiary" class="ion-padding-end ion-padding-bottom ion-card-description">
-        <div *ngIf="isAgree == undefined">
+        <div *ngIf="title == 1">
           <ion-label color="medium">ผู้ใช้งานยินยอมเป็นสมาชิกของร้านเดี๋ยวก็ละลายเท่านั้น จึงจะได้รับส่วนลดในการชำระเงิน
           </ion-label>
           <!-- <p class="ion-no-margin">
@@ -33,7 +33,7 @@
           </p> -->
         </div>
 
-        <div *ngIf="isAgree">
+        <div *ngIf="title >1">
           <ion-label color="primary">ผู้ใช้งานยินยอมเป็นสมาชิกของร้านเดี๋ยวก็ละลายเท่านั้น
             จึงจะได้รับส่วนลดในการชำระเงิน
           </ion-label>
@@ -47,20 +47,20 @@
 
     <!-- KYC -->
     <ng-container>
-      <ion-item color="tertiary" *ngIf="isCom == false" >
+      <ion-item color="tertiary" *ngIf="title <= 2">
         <ion-icon name="alert-circle-outline" color="medium"></ion-icon>
         <ion-label class="ion-padding-start" color="medium"><b>ข้อมูลยืนยันตัวตน</b>
         </ion-label>
       </ion-item>
 
-      <ion-item color="tertiary" *ngIf="isCom == true">
+      <ion-item color="tertiary" *ngIf="title >2">
         <ion-icon name="checkmark-circle-outline" color="primary"></ion-icon>
         <ion-label class="ion-padding-start" color="primary"><b>ข้อมูลยืนยันตัวตน</b>
         </ion-label>
       </ion-item>
 
       <ion-card color="tertiary" class="ion-padding-end ion-padding-bottom ion-card-description">
-        <div *ngIf="isCom == false">
+        <div *ngIf="title <= 2">
           <ion-label color="medium">ผู้ใช้งานต้องผ่านการยืนยันตัวตน (KYC) เพื่อความปลอดภัยในการใช้บริการชำระเงิน
           </ion-label>
           <!-- <p class="ion-no-margin">
@@ -68,7 +68,7 @@
           </p> -->
         </div>
 
-        <div *ngIf="isCom == true">
+        <div *ngIf="title >2">
           <ion-label color="primary">ผู้ใช้งานต้องผ่านการยืนยันตัวตน (KYC) เพื่อความปลอดภัยในการใช้บริการชำระเงิน
           </ion-label>
           <!-- <p class="ion-no-margin">
@@ -79,22 +79,22 @@
       <hr class="ion-no-margin">
     </ng-container>
 
-     <!-- เพิ่มบัญชี -->
-     <ng-container>
-      <ion-item color="tertiary" *ngIf="isCom == false" >
+    <!-- เพิ่มบัญชี -->
+    <ng-container>
+      <ion-item color="tertiary" *ngIf="title <= 2">
         <ion-icon name="alert-circle-outline" color="medium"></ion-icon>
         <ion-label class="ion-padding-start" color="medium"><b>เพิ่มบัญชีของฉัน</b>
         </ion-label>
       </ion-item>
 
-      <ion-item color="tertiary" *ngIf="isCom == true">
+      <ion-item color="tertiary" *ngIf="title > 2">
         <ion-icon name="checkmark-circle-outline" color="primary"></ion-icon>
         <ion-label class="ion-padding-start" color="primary"><b>เพิ่มบัญชีของฉัน</b>
         </ion-label>
       </ion-item>
 
       <ion-card color="tertiary" class="ion-padding-end ion-padding-bottom ion-card-description">
-        <div *ngIf="isCom == false">
+        <div *ngIf="title <= 2">
           <ion-label color="medium">ผู้ใช้งานต้องผ่านการยืนยันตัวตน (KYC) เพื่อความปลอดภัยในการใช้บริการชำระเงิน
           </ion-label>
           <!-- <p class="ion-no-margin">
@@ -102,7 +102,7 @@
           </p> -->
         </div>
 
-        <div *ngIf="isCom == true">
+        <div *ngIf="title > 2">
           <ion-label color="primary">ผู้ใช้งานต้องผ่านการยืนยันตัวตน (KYC) เพื่อความปลอดภัยในการใช้บริการชำระเงิน
           </ion-label>
           <!-- <p class="ion-no-margin">
@@ -116,20 +116,20 @@
 
     <!-- จ่ายเงิน -->
     <ng-container>
-      <ion-item color="tertiary" *ngIf="isPay == undefined || isPay == false" >
+      <ion-item color="tertiary" *ngIf="title < 4">
         <ion-icon name="alert-circle-outline" color="medium"></ion-icon>
         <ion-label class="ion-padding-start" color="medium"><b>จ่ายเงินค่าสมัครสมาชิกของร้านเดี๋ยวก็ละลาย</b>
         </ion-label>
       </ion-item>
 
-      <ion-item color="tertiary" *ngIf="isPay == true">
+      <ion-item color="tertiary" *ngIf="title >=4">
         <ion-icon name="checkmark-circle-outline" color="primary"></ion-icon>
         <ion-label class="ion-padding-start" color="primary"><b>จ่ายเงินค่าสมัครสมาชิกของร้านเดี๋ยวก็ละลาย</b>
         </ion-label>
       </ion-item>
 
       <ion-card color="tertiary" class="ion-padding-end ion-padding-bottom ion-card-description">
-        <div *ngIf="isPay == undefined || isPay == false">
+        <div *ngIf="title <4">
           <ion-label color="medium">ผู้ใช้งานยินยอมเป็นสมาชิกของร้านเดี๋ยวก็ละลายเท่านั้น จึงจะได้รับส่วนลดในการชำระเงิน
           </ion-label>
           <!-- <p class="ion-no-margin">
@@ -137,7 +137,7 @@
           </p> -->
         </div>
 
-        <div *ngIf="isPay == true">
+        <div *ngIf="title>=4">
           <ion-label color="primary">ผู้ใช้งานยินยอมเป็นสมาชิกของร้านเดี๋ยวก็ละลายเท่านั้น
             จึงจะได้รับส่วนลดในการชำระเงิน
           </ion-label>
@@ -151,8 +151,9 @@
   </ion-list>
   <!-- <ion-label *ngIf="isAgree == 'true'" [routerLink]="['/eslip-home-m2']">Home</ion-label> -->
 </ion-content>
+<ion-button color="primary" *ngIf="title ==2" (click)="openDlg()">ทำ kyc/ ผูกบัญชี เรียบร้อย</ion-button>
 
-  <ion-footer class="ion-no-border">
+<ion-footer class="ion-no-border">
   <ion-card class="ion-padding ion-text-end" *ngIf="isShowNextStepTimer">
     <ion-card-content class="ion-text-center">
       <ion-label color="medium">ดำเนินการอัตโนมัติใน {{ displayNextStepTime }} วินาที</ion-label>
@@ -163,8 +164,7 @@
     <ion-progress-bar class="progress-outer" value="{{ nextStepProgressBar }}"></ion-progress-bar>
   </ion-card>
 
-  <ion-button color="primary" *ngIf="isAgree" (click)="openDlg()">ทำ kyc/ ผูกบัญชี เรียบร้อย</ion-button>
 
-  <ion-button color="danger" class="ion-no-margin" expand="full" (click)="navigationNextStep()">{{text}}
+  <ion-button color="danger" class="ion-no-margin" expand="full" (click)="navigationNextStep()">ทำรายการต่อ
   </ion-button>
 </ion-footer>

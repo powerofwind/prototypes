@@ -44,8 +44,10 @@
     </ion-item>
     <ion-item class="ion-text-center" color="tertiary" lines="full">
       <ion-label color="danger">
-        <h2><b><ion-icon color="primary" name="checkmark-circle-sharp"></ion-icon> 299.00
-            <small>THB</small></b>
+        <h2><b>
+            <ion-icon color="primary" name="checkmark-circle-sharp"></ion-icon> 299.00
+            <small>THB</small>
+          </b>
         </h2>
       </ion-label>
     </ion-item>
@@ -84,5 +86,5 @@
 
 </ion-content>
 <ion-footer>
-  <ion-button color="danger" class="ion-no-margin" expand="full" routerLink="/coupon08received">ตกลง</ion-button>
+  <ion-button color="danger" class="ion-no-margin" expand="full" (click)="gotoPage()">ตกลง</ion-button>
 </ion-footer>

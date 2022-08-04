@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 
 @Component({
   selector: 'app-landingpage',
@@ -14,7 +14,10 @@ export class LandingpagePage implements OnInit {
   public isShowNextStepTimer: boolean;
   public displayNextStepTime: number;
   public nextStepProgressBar: number;
-  constructor(private router: Router) { }
+  title: any;
+  constructor(private router: Router, private route: ActivatedRoute) {
+    this.route.params.subscribe(params => this.title = params.title);
+  }
 
   ngOnInit() {
   }
@@ -72,7 +75,19 @@ export class LandingpagePage implements OnInit {
     // }
     // else if (this.isPay == true) {
     // }
-    this.router.navigate(['/one-prototype-home']);
+    if (this.title == 1) {
+      this.router.navigate(['/coupon02register']);
+    } else if (this.title == 3) {
+      this.router.navigate(['/coupon03cart']);
+    } else if (this.title == 4) {
+      this.router.navigate(['/coupon08received']);
+    } else {
+      this.router.navigate(['/one-prototype-home']);
+    }
+  }
+
+  openDlg(){
+    this.title++;
   }
 
 

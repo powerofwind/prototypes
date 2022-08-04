@@ -8,12 +8,13 @@ import { Router } from '@angular/router';
 })
 export class Coupon01mainPage implements OnInit {
   text: string = "สนใจ";
-  constructor( private router: Router) { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
   gotoPage() {
-    this.router.navigate(['/coupon02register']);
+    this.router.navigate(['/landingpage',   { title: "1"  }]);
+    // this.router.navigate(['/coupon02register']);
   }
 
 }

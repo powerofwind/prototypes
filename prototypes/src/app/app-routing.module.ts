@@ -228,11 +228,19 @@ const routes: Routes = [
     loadChildren: () => import('./coupon04cartconfirm/coupon04cartconfirm.module').then( m => m.Coupon04cartconfirmPageModule)
   },
   {
+    path: 'coupon04cartconfirm/:next',
+    loadChildren: () => import('./coupon04cartconfirm/coupon04cartconfirm.module').then( m => m.Coupon04cartconfirmPageModule)
+  },
+  {
     path: 'coupon05topup',
     loadChildren: () => import('./coupon05topup/coupon05topup.module').then( m => m.Coupon05topupPageModule)
   },
   {
     path: 'coupon06topupdetail',
+    loadChildren: () => import('./coupon06topupdetail/coupon06topupdetail.module').then( m => m.Coupon06topupdetailPageModule)
+  },
+  {
+    path: 'coupon06topupdetail/:next',
     loadChildren: () => import('./coupon06topupdetail/coupon06topupdetail.module').then( m => m.Coupon06topupdetailPageModule)
   },
   {
@@ -248,9 +256,14 @@ const routes: Routes = [
     loadChildren: () => import('./landingpage/landingpage.module').then( m => m.LandingpagePageModule)
   },
   {
+    path: 'landingpage/:title',
+    loadChildren: () => import('./landingpage/landingpage.module').then( m => m.LandingpagePageModule)
+  },
+  {
     path: 'coupon02register',
     loadChildren: () => import('./coupon02register/coupon02register.module').then( m => m.Coupon02registerPageModule)
-  },  {
+  },
+  {
     path: 'wallet-main',
     loadChildren: () => import('./wallet-main/wallet-main.module').then( m => m.WalletMainPageModule)
   },
