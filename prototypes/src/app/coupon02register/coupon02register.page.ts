@@ -14,7 +14,8 @@ export class Coupon02registerPage implements OnInit {
   }
 
   gotoPage() {
-    this.router.navigate(['/coupon03cart']);
+    this.router.navigate(['/landingpage',   { title: "2"  }]);
+    // this.router.navigate(['/coupon03cart']);
   }
 
 }
